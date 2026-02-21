@@ -1,0 +1,42 @@
+export const business = {
+    name: 'ServicePro LLC',
+    legalName: 'ServicePro LLC',
+    registration: 'Delaware, United States',
+    address: {
+        line1: '1309 Coffeen Avenue STE 1200',
+        city: 'Sheridan',
+        state: 'WY',
+        zip: '82801',
+        country: 'United States of America',
+        display: '1309 Coffeen Avenue STE 1200, Sheridan, WY 82801',
+    },
+    founded: 2025,
+    website: 'https://www.getservicepro.com',
+    emails: {
+        main: 'hello@getservicepro.com',
+        support: 'support@getservicepro.com',
+        billing: 'billing@getservicepro.com',
+        press: 'press@getservicepro.com',
+        partners: 'partners@getservicepro.com',
+        investors: 'investors@getservicepro.com',
+        careers: 'careers@getservicepro.com',
+    },
+    phone: {
+        display: '+1 (855) 737-2876',
+        vanity: '1-855-SERVICEPRO',
+        value: '+18557372876',
+    },
+    hours: {
+        days: 'Monday – Friday',
+        time: '9:00 AM – 6:00 PM MT',
+        display: 'Monday – Friday, 9:00 AM – 6:00 PM Mountain Time',
+        responseTime: 'Within 1 business day',
+    },
+    launch: {
+        beta: 'April 1, 2026',
+        public: 'May 1, 2026',
+        waitlistPerk: '30 days free (vs standard 14-day trial)',
+        foundingPricing: 'Locked-in for first year for early signups',
+    },
+    appUrl: 'https://app.getservicepro.com',
+};

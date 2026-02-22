@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { Check, ChevronDown } from 'lucide-vue-next';
-import { Head } from '@inertiajs/vue3';
 import MarketingLayout from '@/layouts/MarketingLayout.vue';
 import SectionHeader from '@/components/ui/SectionHeader.vue';
 import Button from '@/components/ui/Button.vue';
@@ -107,17 +106,28 @@ const painPoints = [
     },
 ];
 
-// JSON-LD structured data
-const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'ServicePro',
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web, iOS, Android',
-    offers: { '@type': 'Offer', price: '79', priceCurrency: 'USD' },
-    description: 'Field service management software for home service businesses',
-    url: 'https://www.getservicepro.com',
-};
+// JSON-LD structured data — injected via DOM to avoid Vue template script restriction
+let jsonLdScript: HTMLScriptElement | null = null;
+
+onMounted(() => {
+    jsonLdScript = document.createElement('script');
+    jsonLdScript.type = 'application/ld+json';
+    jsonLdScript.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'ServicePro',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web, iOS, Android',
+        offers: { '@type': 'Offer', price: '79', priceCurrency: 'USD' },
+        description: 'Field service management software for home service businesses',
+        url: 'https://www.getservicepro.com',
+    });
+    document.head.appendChild(jsonLdScript);
+});
+
+onUnmounted(() => {
+    jsonLdScript?.remove();
+});
 </script>
 
 <template>
@@ -125,11 +135,6 @@ const structuredData = {
         title="ServicePro — Field Service Management Software for Small Businesses"
         description="Run your home service business like a pro. Scheduling, invoicing, and smart SMS for HVAC, plumbing, electrical & cleaning crews. From $79/month."
     >
-        <!-- JSON-LD -->
-        <Head>
-            <script type="application/ld+json">{{ JSON.stringify(structuredData) }}</script>
-        </Head>
-
         <!-- SECTION 1: Hero -->
         <section class="relative flex min-h-screen items-center bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800 pt-32 pb-20">
             <div class="dot-grid absolute inset-0 opacity-50"></div>

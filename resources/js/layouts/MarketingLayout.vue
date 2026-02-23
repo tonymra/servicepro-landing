@@ -4,6 +4,7 @@ import AnnouncementBar from '@/components/marketing/AnnouncementBar.vue';
 import Navbar from '@/components/marketing/Navbar.vue';
 import Footer from '@/components/marketing/Footer.vue';
 import CookieBanner from '@/components/marketing/CookieBanner.vue';
+import ScrollToTop from '@/components/ui/ScrollToTop.vue';
 
 interface Props {
     title: string;
@@ -45,4 +46,5 @@ withDefaults(defineProps<Props>(), {
 
     <Footer />
     <CookieBanner />
+    <ScrollToTop />
 </template>

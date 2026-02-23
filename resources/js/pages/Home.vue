@@ -133,7 +133,7 @@ onUnmounted(() => {
 <template>
     <MarketingLayout
         title="ServicePro — Field Service Management Software for Small Businesses"
-        description="Run your home service business like a pro. Scheduling, invoicing, and smart SMS for HVAC, plumbing, electrical & cleaning crews. From $79/month."
+        description="Run your home service business like a pro. Scheduling, invoicing, and smart SMS for HVAC, plumbing, electrical, cleaning, and all home service crews. From $79/month."
     >
         <!-- SECTION 1: Hero -->
         <section class="relative flex min-h-screen items-center bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800 pt-32 pb-20">
@@ -153,7 +153,7 @@ onUnmounted(() => {
                         </h1>
 
                         <p class="mt-6 max-w-2xl text-xl leading-relaxed text-neutral-300 mx-auto lg:mx-0">
-                            Scheduling, invoicing, and smart SMS follow-up — built for HVAC, plumbing, electrical, and cleaning crews of 1 to 10.
+                            Scheduling, invoicing, and smart SMS follow-up — built for any home service crew of 1 to 10.
                         </p>
 
                         <div class="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
@@ -285,7 +285,7 @@ onUnmounted(() => {
                 <SectionHeader
                     eyebrow="Sound familiar?"
                     heading="Running a home service business is hard enough."
-                    subtext="Most HVAC, plumbing, and cleaning business owners are managing jobs out of their head — and losing money because of it."
+                    subtext="Most home service business owners are managing jobs out of their head — and losing money because of it."
                 />
                 <div class="grid gap-8 md:grid-cols-3">
                     <div

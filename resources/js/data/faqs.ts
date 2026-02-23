@@ -14,7 +14,7 @@ export const generalFaqs: FaqItem[] = [
     },
     {
         question: 'Which home service businesses does ServicePro work for?',
-        answer: 'ServicePro is built for HVAC, plumbing, electrical, cleaning, handyman, landscaping, pest control, painting, and appliance repair businesses in the United States.',
+        answer: 'ServicePro is built for small to medium home service businesses — including HVAC, plumbing, electrical, cleaning, handyman, landscaping, pest control, painting, appliance repair, and many more trades.',
     },
     {
         question: 'How long does setup take?',

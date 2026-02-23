@@ -18,7 +18,7 @@ const categories = ['Business Tips', 'How-To', 'Industry', 'Productivity', 'Tech
 <template>
     <MarketingLayout
         title="Blog — ServicePro"
-        description="Tips, guides, and insights for HVAC, plumbing, electrical, and cleaning business owners."
+        description="Tips, guides, and insights for home service business owners."
     >
         <!-- Hero -->
         <section class="bg-white pt-32 pb-16 border-b border-neutral-100">

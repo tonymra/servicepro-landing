@@ -40,7 +40,7 @@ export const pricingPlans: PricingPlan[] = [
         highlighted: true,
         badge: 'Most Popular',
         cta: 'Start Free Trial',
-        note: 'Most popular with HVAC and plumbing crews',
+        note: 'Most popular with field service crews',
         features: [
             'Up to 5 users',
             'Everything in Starter',

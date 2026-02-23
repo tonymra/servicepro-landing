@@ -13,7 +13,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-    description: 'Run your home service business like a pro. Scheduling, invoicing, and smart SMS for HVAC, plumbing, electrical & cleaning crews.',
+    description: 'Run your home service business like a pro. Scheduling, invoicing, and smart SMS for HVAC, plumbing, electrical, cleaning crews, and more.',
     ogImage: '/og-image.png',
 });
 </script>
@@ -34,8 +34,10 @@ withDefaults(defineProps<Props>(), {
         <meta name="twitter:image" :content="ogImage" />
     </Head>
 
-    <AnnouncementBar />
-    <Navbar />
+    <div class="fixed top-0 left-0 right-0 z-40">
+        <AnnouncementBar />
+        <Navbar />
+    </div>
 
     <main>
         <slot />

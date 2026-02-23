@@ -22,10 +22,10 @@ export const socialLinks: SocialLink[] = [
         color: '#E4405F',
     },
     {
-        platform: 'X (Twitter)',
+        platform: 'X',
         url: 'https://www.x.com/getservicepro',
         handle: '@getservicepro',
-        icon: 'twitter',
+        icon: 'x',
         color: '#000000',
     },
     {

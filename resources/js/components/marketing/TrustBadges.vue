@@ -8,9 +8,9 @@ interface Props {
 withDefaults(defineProps<Props>(), { theme: 'light' });
 
 const badges = [
-    { icon: 'flag', label: 'US-Only Platform' },
     { icon: 'lock', label: 'SSL Secured' },
     { icon: 'shield', label: 'SOC 2 In Progress' },
+    { icon: 'check', label: 'No Contract Required' },
 ];
 </script>
 
@@ -21,9 +21,9 @@ const badges = [
             :key="badge.label"
             class="flex items-center gap-1.5"
         >
-            <span v-if="badge.icon === 'flag'" class="text-base">🇺🇸</span>
-            <Lock v-else-if="badge.icon === 'lock'" :class="['h-4 w-4', theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500']" />
-            <Shield v-else :class="['h-4 w-4', theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500']" />
+            <Lock v-if="badge.icon === 'lock'" :class="['h-4 w-4', theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500']" />
+            <Shield v-else-if="badge.icon === 'shield'" :class="['h-4 w-4', theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500']" />
+            <Check v-else :class="['h-4 w-4', theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500']" />
             <span :class="['text-sm', theme === 'dark' ? 'text-neutral-400' : 'text-neutral-500']">
                 {{ badge.label }}
             </span>

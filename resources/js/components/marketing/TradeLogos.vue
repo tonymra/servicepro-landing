@@ -10,6 +10,7 @@ const trades = [
     { emoji: '🖌️', label: 'Painting' },
     { emoji: '🍳', label: 'Appliance Repair' },
     { emoji: '🔑', label: 'Locksmith' },
+    { emoji: '➕', label: 'And More' },
 ];
 </script>
 

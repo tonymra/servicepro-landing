@@ -8,7 +8,7 @@ import WaitlistForm from '@/components/marketing/WaitlistForm.vue';
 const values = [
     { emoji: '✨', title: 'Simplicity first', description: "Every feature we build has to pass one test: can a plumber on the side of the road use it in under 60 seconds? If not, we simplify it or cut it." },
     { emoji: '🔧', title: 'Built for the trades', description: "We don't build for property managers or enterprise facilities teams. We build for the owner-operator with 1 to 10 people on their crew." },
-    { emoji: '🇺🇸', title: 'US-focused', description: 'ServicePro is built specifically for the US home service market. Our pricing is in dollars, our support team is in the US, and our compliance is built for US law.' },
+    { emoji: '🏡', title: 'Built for home services', description: 'ServicePro is purpose-built for the home service market. Our pricing is straightforward, our support team knows the trades, and our features match how field crews actually work.' },
 ];
 
 const pillars = [

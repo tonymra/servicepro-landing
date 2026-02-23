@@ -47,7 +47,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">2. Service Description</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            ServicePro is a business management platform designed for home service professionals, including HVAC technicians, plumbers, electricians, and cleaning businesses. The platform provides tools for job scheduling, dispatch, invoicing, payment collection, and SMS-based client communication. We reserve the right to modify, suspend, or discontinue any part of the service at any time with reasonable notice.
+                            ServicePro is a business management platform designed for home service professionals, including HVAC technicians, plumbers, electricians, cleaning businesses, and other field service trades. The platform provides tools for job scheduling, dispatch, invoicing, payment collection, and SMS-based client communication. We reserve the right to modify, suspend, or discontinue any part of the service at any time with reasonable notice.
                         </p>
                     </div>
 

@@ -45,17 +45,23 @@ const APP_URL = 'https://app.getservicepro.com';
 <template>
     <header
         :class="[
-            'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
+            'transition-all duration-300',
             isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent',
         ]"
     >
         <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
             <!-- Logo -->
-            <Link href="/" class="flex flex-col items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded">
-                <span :class="['text-xl font-extrabold leading-none', isScrolled ? 'text-neutral-900' : 'text-white']">
-                    Service<span class="text-brand-500">Pro</span>
-                </span>
-                <span class="mt-0.5 rounded-full bg-brand-100 px-2 py-0.5 text-xs font-medium text-brand-700">US Only</span>
+            <Link href="/" class="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded">
+                <img
+                    v-if="isScrolled"
+                    src="/assets/images/logo.png"
+                    alt="ServicePro"
+                    class="h-9 w-auto"
+                />
+                <template v-else>
+                    <img src="/assets/images/logo_small.png" alt="" class="h-9 w-auto" />
+                    <span class="text-xl font-extrabold text-white leading-none">ServicePro</span>
+                </template>
             </Link>
 
             <!-- Desktop nav -->

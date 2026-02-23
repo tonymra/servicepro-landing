@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube, Linkedin, Music2 } from 'lucide-vue-next';
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Linkedin, Music2 } from 'lucide-vue-next';
 import { Link } from '@inertiajs/vue3';
 import type { Component } from 'vue';
 import { footerLinks } from '@/data/navigation';
@@ -9,7 +9,6 @@ import TrustBadges from './TrustBadges.vue';
 const socialIconMap: Record<string, Component> = {
     facebook: Facebook,
     instagram: Instagram,
-    twitter: Twitter,
     youtube: Youtube,
     linkedin: Linkedin,
     'music-2': Music2,
@@ -44,10 +43,10 @@ const currentYear = new Date().getFullYear();
                 <!-- Brand column -->
                 <div>
                     <Link href="/" class="inline-block">
-                        <span class="text-xl font-extrabold text-white">Service<span class="text-brand-500">Pro</span></span>
+                        <img src="/assets/images/logo.png" alt="ServicePro" class="h-10 w-auto" />
                     </Link>
                     <p class="mt-4 text-sm leading-relaxed text-neutral-400">
-                        Field service management software built for small home service businesses across the United States.
+                        Field service management software built for small home service businesses.
                     </p>
 
                     <!-- Social links -->
@@ -61,7 +60,10 @@ const currentYear = new Date().getFullYear();
                             rel="noopener noreferrer"
                             class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 text-neutral-400 hover:bg-white/10 hover:text-white transition-colors"
                         >
-                            <component :is="socialIconMap[social.icon]" class="h-4 w-4" />
+                            <svg v-if="social.icon === 'x'" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+                            </svg>
+                            <component v-else :is="socialIconMap[social.icon]" class="h-4 w-4" />
                         </a>
                     </div>
 
@@ -131,7 +133,7 @@ const currentYear = new Date().getFullYear();
         <div class="border-t border-white/10">
             <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-neutral-500 sm:flex-row sm:px-6 lg:px-8">
                 <span>© {{ currentYear }} ServicePro LLC. All rights reserved. Registered in the United States.</span>
-                <span>Made for home service businesses 🇺🇸</span>
+                <span>Made for home service businesses.</span>
             </div>
         </div>
     </footer>

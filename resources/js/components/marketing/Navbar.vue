@@ -39,7 +39,7 @@ function onPricingLeave(): void {
     pricingTimeout = setTimeout(() => { pricingHover.value = false; }, 150);
 }
 
-const APP_URL = 'https://app.getservicepro.com';
+const APP_URL = 'https://app.fieldix.com';
 </script>
 
 <template>

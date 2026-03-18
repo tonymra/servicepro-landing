@@ -38,5 +38,5 @@ export const business = {
         waitlistPerk: '30 days free (vs standard 14-day trial)',
         foundingPricing: 'Locked-in for first year for early signups',
     },
-    appUrl: 'https://app.getservicepro.com',
+    appUrl: 'https://app.fieldix.com',
 };

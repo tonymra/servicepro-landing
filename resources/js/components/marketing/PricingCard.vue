@@ -11,7 +11,7 @@ interface Props {
 
 const props = defineProps<Props>();
 
-const appUrl = 'https://app.getservicepro.com';
+const appUrl = 'https://app.fieldix.com';
 
 function formatPrice(price: number): string {
     return price % 1 === 0 ? price.toString() : price.toFixed(2);

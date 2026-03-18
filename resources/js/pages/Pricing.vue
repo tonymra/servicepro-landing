@@ -142,7 +142,7 @@ const waitlistBenefits = [
                     </div>
                 </div>
                 <div class="mt-10 text-center">
-                    <Button href="https://app.getservicepro.com/register" variant="primary" size="lg" external>
+                    <Button href="https://app.fieldix.com/register" variant="primary" size="lg" external>
                         Try Fieldix free for 14 days — no credit card required
                     </Button>
                 </div>

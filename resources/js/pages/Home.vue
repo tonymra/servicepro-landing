@@ -164,6 +164,9 @@ onUnmounted(() => {
                             <span class="flex items-center gap-2">
                                 <Check class="h-4 w-4 text-accent-400" /> Cancel any time
                             </span>
+                            <span class="flex items-center gap-2 text-neutral-300">
+                                🇺🇸 US businesses only
+                            </span>
                         </div>
                     </div>
 

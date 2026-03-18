@@ -14,7 +14,7 @@ export const generalFaqs: FaqItem[] = [
     },
     {
         question: 'Which home service businesses does Fieldix work for?',
-        answer: 'Fieldix is built for small to medium home service businesses — including HVAC, plumbing, electrical, cleaning, handyman, landscaping, pest control, painting, appliance repair, and many more trades.',
+        answer: 'Fieldix is currently available for US-based home service businesses only. It\'s built for small to medium operations — including HVAC, plumbing, electrical, cleaning, handyman, landscaping, pest control, painting, appliance repair, and many more trades.',
     },
     {
         question: 'How long does setup take?',

@@ -17,6 +17,7 @@ import FaqAccordion from '@/components/marketing/FaqAccordion.vue';
 import { allFeatures } from '@/data/features';
 import { pricingPlans } from '@/data/pricing';
 import { generalFaqs } from '@/data/faqs';
+import { WAITLIST_DISPLAY, BETA_DISPLAY } from '@/data/stats';
 
 const isAnnual = ref(false);
 
@@ -383,7 +384,7 @@ onUnmounted(() => {
                     </div>
                     <div class="hidden h-8 w-px bg-white/10 sm:block"></div>
                     <div>
-                        <div class="text-2xl font-bold text-white">50+</div>
+                        <div class="text-2xl font-bold text-white">{{ BETA_DISPLAY }}</div>
                         <div class="text-sm text-neutral-400">Businesses in beta</div>
                     </div>
                 </div>
@@ -464,7 +465,7 @@ onUnmounted(() => {
                     <div class="flex-1">
                         <WaitlistForm variant="inline" />
                         <p class="mt-4 text-center text-sm text-blue-200">
-                            487 businesses already on the waitlist
+                            {{ WAITLIST_DISPLAY }} businesses already on the waitlist
                         </p>
                     </div>
                 </div>
@@ -489,7 +490,7 @@ onUnmounted(() => {
         <section class="bg-neutral-950 py-20 lg:py-28">
             <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-white lg:text-4xl">Ready to run your business like a pro?</h2>
-                <p class="mt-4 text-lg text-neutral-400">Join 487 home service businesses already on the waitlist.</p>
+                <p class="mt-4 text-lg text-neutral-400">Join {{ WAITLIST_DISPLAY }} home service businesses already on the waitlist.</p>
                 <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
                     <Button href="#waitlist" variant="success" size="xl">Join the Waitlist</Button>
                     <Button href="/pricing" variant="ghost" size="xl" class="text-white hover:bg-white/10 border border-white/20">

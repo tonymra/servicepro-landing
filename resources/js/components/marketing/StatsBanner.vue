@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { WAITLIST_DISPLAY, BETA_DISPLAY } from '@/data/stats';
+
 const stats = [
-    { value: '500+', label: 'Home service businesses on the waitlist' },
+    { value: WAITLIST_DISPLAY, label: 'Businesses on the waitlist' },
     { value: '<30 min', label: 'Average setup time' },
     { value: '$79/mo', label: 'Starting price — half the cost of Jobber' },
-    { value: '4.9 / 5', label: 'Beta user satisfaction rating' },
+    { value: BETA_DISPLAY, label: 'Businesses in beta' },
 ];
 </script>
 

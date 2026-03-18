@@ -43,7 +43,7 @@ const currentYear = new Date().getFullYear();
                 <!-- Brand column -->
                 <div>
                     <Link href="/" class="inline-block">
-                        <img src="/assets/images/logo.png" alt="ServicePro" class="h-10 w-auto" />
+                        <img src="/assets/images/logo.png" alt="Fieldix" class="h-10 w-auto" />
                     </Link>
                     <p class="mt-4 text-sm leading-relaxed text-neutral-400">
                         Field service management software built for small home service businesses.
@@ -80,6 +80,8 @@ const currentYear = new Date().getFullYear();
                         <li v-for="link in footerLinks.product" :key="link.label">
                             <a
                                 :href="link.href"
+                                :target="link.external ? '_blank' : undefined"
+                                :rel="link.external ? 'noopener noreferrer' : undefined"
                                 class="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors"
                             >
                                 {{ link.label }}
@@ -131,9 +133,18 @@ const currentYear = new Date().getFullYear();
 
         <!-- Bottom bar -->
         <div class="border-t border-white/10">
-            <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-neutral-500 sm:flex-row sm:px-6 lg:px-8">
-                <span>© {{ currentYear }} ServicePro LLC. All rights reserved. Registered in the United States.</span>
-                <span>Made for home service businesses.</span>
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center justify-between gap-3 text-sm text-neutral-500 sm:flex-row">
+                    <span>© {{ currentYear }} Fieldix LLC. All rights reserved.</span>
+                    <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-neutral-400">
+                        🇺🇸 Currently available for US-based businesses only
+                    </span>
+                    <div class="flex gap-4">
+                        <a href="/privacy" class="hover:text-neutral-300 transition-colors">Privacy</a>
+                        <a href="/terms" class="hover:text-neutral-300 transition-colors">Terms</a>
+                        <a href="/contact" class="hover:text-neutral-300 transition-colors">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

@@ -19,7 +19,7 @@ class WaitlistWelcomeMail extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: "You're on the ServicePro waitlist 🎉",
+            subject: "You're on the Fieldix waitlist 🎉",
         );
     }
 

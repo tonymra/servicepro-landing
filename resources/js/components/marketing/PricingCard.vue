@@ -11,7 +11,15 @@ interface Props {
 
 const props = defineProps<Props>();
 
-const appUrl = 'https://app.getservicepro.com';
+const appUrl = 'https://app.getfieldix.com';
+
+function formatPrice(price: number): string {
+    return price % 1 === 0 ? price.toString() : price.toFixed(2);
+}
+
+function formatTotal(total: number): string {
+    return total % 1 === 0 ? total.toFixed(0) : total.toFixed(2);
+}
 </script>
 
 <template>
@@ -35,12 +43,12 @@ const appUrl = 'https://app.getservicepro.com';
         <div class="mb-6">
             <div class="flex items-baseline gap-1">
                 <span class="text-4xl font-extrabold text-neutral-900">
-                    ${{ isAnnual ? plan.annualPrice : plan.monthlyPrice }}
+                    ${{ formatPrice(isAnnual ? plan.annualPrice : plan.monthlyPrice) }}
                 </span>
                 <span class="text-neutral-500">/mo</span>
             </div>
             <p v-if="isAnnual" class="mt-1 text-sm text-accent-500 font-medium">
-                Billed annually · Save 20%
+                Billed ${{ formatTotal(plan.annualTotal) }}/yr · Save 20%
             </p>
         </div>
 

@@ -70,7 +70,7 @@ async function submit(): Promise<void> {
 
 <template>
     <MarketingLayout
-        title="Contact ServicePro"
+        title="Contact Fieldix"
         description="Talk to our team. We're a real company with real people who respond within 1 business day."
     >
         <section class="bg-white pt-32 pb-20">
@@ -143,7 +143,7 @@ async function submit(): Promise<void> {
                                 <label class="flex items-start gap-3 cursor-pointer">
                                     <input v-model="form.privacy_agreed" type="checkbox" class="mt-0.5 h-4 w-4 rounded border-neutral-300 text-brand-600 focus:ring-brand-500" />
                                     <span class="text-sm text-neutral-600">
-                                        I agree to ServicePro's
+                                        I agree to Fieldix's
                                         <a href="/privacy" class="text-brand-600 underline hover:no-underline">Privacy Policy</a>
                                     </span>
                                 </label>
@@ -170,7 +170,7 @@ async function submit(): Promise<void> {
                                 <div class="flex items-start gap-3">
                                     <MapPin class="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
                                     <div class="text-sm text-neutral-700">
-                                        <div class="font-semibold">ServicePro LLC</div>
+                                        <div class="font-semibold">Fieldix LLC</div>
                                         <div>1309 Coffeen Avenue STE 1200</div>
                                         <div>Sheridan, Wyoming 82801</div>
                                         <div>United States</div>

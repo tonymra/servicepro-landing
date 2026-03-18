@@ -18,14 +18,14 @@ const activeFeatures = computed(() => allFeatures.filter((f) => f.category === a
 const waitlistBenefits = [
     '30-day free trial (standard is 14 days)',
     'Founding member rate — locked in for your first year',
-    'Priority access before public launch on 1 May 2026',
+    'Priority access before public launch on 1 June 2026',
 ];
 </script>
 
 <template>
     <MarketingLayout
-        title="Features — ServicePro"
-        description="Every tool you need to manage jobs, invoices, and customers. See all ServicePro features for home service businesses."
+        title="Features — Fieldix"
+        description="Every tool you need to manage jobs, invoices, and customers. See all Fieldix features for home service businesses."
     >
         <!-- Hero -->
         <section class="bg-white pt-32 pb-20">
@@ -35,10 +35,10 @@ const waitlistBenefits = [
                     Every feature your home service<br class="hidden lg:block" /> business needs.
                 </h1>
                 <p class="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-neutral-500">
-                    From first call to final payment — ServicePro manages every step of the job lifecycle.
+                    From first call to final payment — Fieldix manages every step of the job lifecycle.
                 </p>
                 <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                    <Button href="https://app.getservicepro.com/register" variant="primary" size="lg" external>
+                    <Button href="https://app.getfieldix.com/register" variant="primary" size="lg" external>
                         Start Free Trial
                     </Button>
                     <Button href="/pricing" variant="secondary" size="lg">View Pricing</Button>
@@ -52,7 +52,7 @@ const waitlistBenefits = [
                 <SectionHeader
                     eyebrow="Feature categories"
                     heading="Built for every part of your business"
-                    subtext="ServicePro covers every workflow — from scheduling your first job to collecting your final payment."
+                    subtext="Fieldix covers every workflow — from scheduling your first job to collecting your final payment."
                 />
 
                 <!-- Tabs -->

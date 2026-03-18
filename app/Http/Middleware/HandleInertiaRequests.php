@@ -23,9 +23,9 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
-            'appName' => 'ServicePro',
+            'appName' => 'Fieldix',
             'appUrl' => config('app.url'),
-            'launchDate' => 'May 1, 2026',
+            'launchDate' => 'June 1, 2026',
             'waitlistCount' => Cache::remember('waitlist_count', 60, fn () => WaitlistEntry::count()),
         ];
     }

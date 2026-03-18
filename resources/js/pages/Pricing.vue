@@ -1,51 +1,39 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { Check, ShieldCheck } from 'lucide-vue-next';
 import MarketingLayout from '@/layouts/MarketingLayout.vue';
 import SectionHeader from '@/components/ui/SectionHeader.vue';
 import Button from '@/components/ui/Button.vue';
 import PricingCard from '@/components/marketing/PricingCard.vue';
-import ComparisonTable from '@/components/marketing/ComparisonTable.vue';
+
 import FaqAccordion from '@/components/marketing/FaqAccordion.vue';
 import WaitlistForm from '@/components/marketing/WaitlistForm.vue';
-import { pricingPlans } from '@/data/pricing';
+import { usePricing } from '@/composables/usePricing';
+import { pricingPlans as staticPlans } from '@/data/pricing';
 import { pricingFaqs } from '@/data/faqs';
+import ToggleSwitch from '@/components/ui/ToggleSwitch.vue';
 
 const isAnnual = ref(false);
 
-const addOns = [
-    { name: 'SMS Credits', price: '$0.025/message', description: 'Additional SMS beyond your plan allowance.' },
-    { name: 'Additional Users', price: '$15/user/month', description: 'Add team members beyond your plan limit.' },
-    { name: 'API Access', price: 'Business only — Included', description: 'Full REST API for custom integrations.' },
-];
+const { plans: apiPlans, addOns: apiAddOns, loading, error, fetchPricing } = usePricing();
 
-const comparisonRows = [
-    { feature: 'Starting price', servicepro: '$79/mo', jobber: '$199/mo', housecall: '$169/mo' },
-    { feature: 'Free trial', servicepro: '14 days', jobber: '14 days', housecall: '14 days' },
-    { feature: 'Setup time', servicepro: 'Under 30 min', jobber: '2–4 hours', housecall: '2–3 hours' },
-    { feature: 'Scheduling', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Invoicing & Payments', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Two-way SMS', servicepro: true, jobber: 'Add-on', housecall: true },
-    { feature: 'GPS Tracking', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Customer Portal', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Automated Follow-ups', servicepro: true, jobber: 'Limited', housecall: true },
-    { feature: 'AI-powered features', servicepro: true, jobber: false, housecall: false },
-    { feature: 'Built for 1–10 staff', servicepro: true, jobber: 'Partial', housecall: 'Partial' },
-    { feature: 'No contract required', servicepro: true, jobber: true, housecall: true },
-    { feature: 'US-dedicated support', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Mobile-first design', servicepro: true, jobber: 'Partial', housecall: true },
-];
+const plans = computed(() => (apiPlans.value.length > 0 ? apiPlans.value : staticPlans));
+const addOns = computed(() => apiAddOns.value);
+
+onMounted(() => {
+    fetchPricing();
+});
 
 const waitlistBenefits = [
     '30-day free trial (standard is 14 days)',
     'Founding member rate — locked in for your first year',
-    'Priority access before public launch on 1 May 2026',
+    'Priority access before public launch on 1 June 2026',
 ];
 </script>
 
 <template>
     <MarketingLayout
-        title="Pricing — ServicePro"
+        title="Pricing — Fieldix"
         description="Simple, transparent pricing from $79/month. No contracts. Try free for 14 days."
     >
         <!-- Hero -->
@@ -64,32 +52,33 @@ const waitlistBenefits = [
         <section class="bg-neutral-50 py-20 lg:py-28">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <!-- Toggle -->
-                <div class="mb-12 flex items-center justify-center gap-4">
+                <div class="mb-12 flex items-center justify-center gap-3">
                     <span :class="['text-sm font-medium', !isAnnual ? 'text-neutral-900' : 'text-neutral-500']">Monthly</span>
-                    <button
-                        type="button"
-                        class="relative h-6 w-12 rounded-full transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
-                        :class="isAnnual ? 'bg-brand-600' : 'bg-neutral-300'"
-                        :aria-pressed="isAnnual"
-                        @click="isAnnual = !isAnnual"
-                    >
-                        <span
-                            class="absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform duration-200"
-                            :class="isAnnual ? 'translate-x-6' : 'translate-x-0.5'"
-                        ></span>
-                    </button>
+                    <ToggleSwitch v-model="isAnnual" />
                     <span :class="['text-sm font-medium', isAnnual ? 'text-neutral-900' : 'text-neutral-500']">
                         Annual <span class="font-semibold text-accent-500">(Save 20%)</span>
                     </span>
                 </div>
 
-                <div class="grid gap-8 md:grid-cols-3">
-                    <PricingCard v-for="plan in pricingPlans" :key="plan.id" :plan="plan" :is-annual="isAnnual" />
+                <!-- Loading skeleton -->
+                <div v-if="loading" class="grid gap-8 md:grid-cols-3">
+                    <div v-for="i in 3" :key="i" class="h-96 animate-pulse rounded-2xl bg-neutral-200" />
+                </div>
+
+                <!-- Error state -->
+                <p v-else-if="error" class="text-center text-sm text-red-500">{{ error }}</p>
+
+                <!-- Plan cards -->
+                <div v-else class="grid gap-8 md:grid-cols-3">
+                    <PricingCard v-for="plan in plans" :key="plan.id" :plan="plan" :is-annual="isAnnual" />
                 </div>
 
                 <p class="mt-8 text-center text-neutral-500">
                     Need more than 10 users?
                     <a href="/contact" class="font-semibold text-brand-600 hover:text-brand-700">Contact us for Enterprise pricing →</a>
+                </p>
+                <p class="mt-4 text-center text-xs text-neutral-400">
+                    * Pricing and features accurate as of March 2026. Subject to change.
                 </p>
             </div>
         </section>
@@ -124,18 +113,36 @@ const waitlistBenefits = [
             </div>
         </section>
 
-        <!-- Comparison Table -->
+        <!-- What you get -->
         <section class="bg-white py-20 lg:py-28">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                 <SectionHeader
-                    eyebrow="How we compare"
-                    heading="More features. Half the price."
-                    subtext="ServicePro gives you 90% of what Jobber and Housecall Pro offer, at a fraction of the cost."
+                    eyebrow="What's included"
+                    heading="What you get at $79/month"
+                    subtext="Enterprise field service platforms charge $200–$400/month for the same capabilities and require days to set up. Fieldix is ready in under 30 minutes."
                 />
-                <ComparisonTable :rows="comparisonRows" />
-                <div class="mt-8 text-center">
-                    <Button href="https://app.getservicepro.com/register" variant="primary" size="lg" external>
-                        Try ServicePro free for 14 days — no credit card required
+                <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                    <div v-for="item in [
+                        { label: 'Job scheduling & dispatch', note: 'Drag-and-drop calendar, crew assignment, GPS check-in' },
+                        { label: 'Invoicing & online payments', note: 'Send invoices, collect card payments, track what\'s owed' },
+                        { label: 'Two-way SMS — included', note: 'No add-on fee. Automated follow-ups and client replies in one inbox' },
+                        { label: 'Automated quote follow-ups', note: 'Fieldix follows up 24 hours after every quote — automatically' },
+                        { label: 'Customer portal', note: 'Clients can view quotes, approve work, and pay online' },
+                        { label: 'GPS tracking', note: 'See your whole crew\'s location in real time' },
+                        { label: 'Mobile-first — no app download', note: 'Full functionality on iOS and Android browsers' },
+                        { label: 'No contract. Cancel any time.', note: 'Month-to-month. No cancellation fees. No lock-in.' },
+                        { label: '14-day free trial', note: 'No credit card required. Waitlist members get 30 days.' },
+                    ]" :key="item.label" class="flex items-start gap-3 rounded-xl border border-neutral-100 bg-neutral-50 px-5 py-4">
+                        <Check class="mt-0.5 h-5 w-5 shrink-0 text-accent-500" />
+                        <div>
+                            <p class="font-semibold text-neutral-900">{{ item.label }}</p>
+                            <p class="mt-0.5 text-sm text-neutral-500">{{ item.note }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 text-center">
+                    <Button href="https://app.getfieldix.com/register" variant="primary" size="lg" external>
+                        Try Fieldix free for 14 days — no credit card required
                     </Button>
                 </div>
             </div>

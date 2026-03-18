@@ -39,7 +39,7 @@ function onPricingLeave(): void {
     pricingTimeout = setTimeout(() => { pricingHover.value = false; }, 150);
 }
 
-const APP_URL = 'https://app.getservicepro.com';
+const APP_URL = 'https://app.getfieldix.com';
 </script>
 
 <template>
@@ -55,12 +55,12 @@ const APP_URL = 'https://app.getservicepro.com';
                 <img
                     v-if="isScrolled"
                     src="/assets/images/logo.png"
-                    alt="ServicePro"
+                    alt="Fieldix"
                     class="h-9 w-auto"
                 />
                 <template v-else>
                     <img src="/assets/images/logo_small.png" alt="" class="h-9 w-auto" />
-                    <span class="text-xl font-extrabold text-white leading-none">ServicePro</span>
+                    <span class="text-xl font-extrabold text-white leading-none">Fieldix</span>
                 </template>
             </Link>
 

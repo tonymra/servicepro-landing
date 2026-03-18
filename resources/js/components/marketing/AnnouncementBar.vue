@@ -21,13 +21,13 @@ function dismiss(): void {
             <div class="flex flex-1 items-center gap-2 text-sm font-medium">
                 <Megaphone class="h-4 w-4 shrink-0" />
                 <span class="hidden sm:inline">
-                    ServicePro is launching 1 May 2026 —
+                    Fieldix is launching 1 June 2026 —
                     <a href="#waitlist" class="underline underline-offset-2 hover:no-underline">
-                        Join the waitlist and get 30 days free
+                        Join the waitlist and get 30 days free instead of 14
                     </a>
                 </span>
                 <span class="sm:hidden">
-                    <a href="#waitlist" class="underline underline-offset-2">Join the waitlist — 30 days free →</a>
+                    <a href="#waitlist" class="underline underline-offset-2">Waitlist only: 30 days free, not 14 →</a>
                 </span>
             </div>
             <div class="flex items-center gap-4">

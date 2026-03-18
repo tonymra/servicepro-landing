@@ -2,7 +2,10 @@ export interface PricingPlan {
     id: string;
     label: string;
     monthlyPrice: number;
+    /** Per-month price when billed annually (e.g. 63.20 for Starter). */
     annualPrice: number;
+    /** Total billed annually (e.g. 758.40 for Starter = 63.20 × 12). */
+    annualTotal: number;
     description: string;
     features: string[];
     cta: string;
@@ -16,7 +19,8 @@ export const pricingPlans: PricingPlan[] = [
         id: 'starter',
         label: 'Starter',
         monthlyPrice: 79,
-        annualPrice: 63,
+        annualPrice: 63.20,
+        annualTotal: 758.40,
         description: 'Perfect for solo operators and 2-man crews',
         highlighted: false,
         cta: 'Start Free Trial',
@@ -35,7 +39,8 @@ export const pricingPlans: PricingPlan[] = [
         id: 'professional',
         label: 'Professional',
         monthlyPrice: 149,
-        annualPrice: 119,
+        annualPrice: 119.20,
+        annualTotal: 1430.40,
         description: 'For growing crews of up to 5 staff',
         highlighted: true,
         badge: 'Most Popular',
@@ -56,7 +61,8 @@ export const pricingPlans: PricingPlan[] = [
         id: 'business',
         label: 'Business',
         monthlyPrice: 299,
-        annualPrice: 239,
+        annualPrice: 239.20,
+        annualTotal: 2870.40,
         description: 'For established businesses with up to 10 staff',
         highlighted: false,
         cta: 'Start Free Trial',

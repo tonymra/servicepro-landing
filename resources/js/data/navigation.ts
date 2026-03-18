@@ -2,6 +2,8 @@ export interface NavLink {
     label: string;
     href: string;
     name?: string;
+    external?: boolean;
+    comingSoon?: boolean;
 }
 
 export interface MegaDropdownItem {
@@ -15,7 +17,7 @@ export const navLinks: NavLink[] = [
     { label: 'Features', href: '/features', name: 'features' },
     { label: 'Pricing', href: '/pricing', name: 'pricing' },
     { label: 'About', href: '/about', name: 'about' },
-    { label: 'Blog', href: '/blog', name: 'blog' },
+
     { label: 'Contact', href: '/contact', name: 'contact' },
 ];
 
@@ -52,6 +54,8 @@ export const footerLinks = {
     product: [
         { label: 'Features', href: '/features' },
         { label: 'Pricing', href: '/pricing' },
+        { label: 'Sign in', href: 'https://app.getfieldix.com/login', external: true },
+        { label: 'Start free trial', href: 'https://app.getfieldix.com/register', external: true },
         { label: 'Changelog', href: '#', comingSoon: true },
         { label: 'Roadmap', href: '#', comingSoon: true },
         { label: 'API Docs', href: '#', comingSoon: true },
@@ -60,7 +64,7 @@ export const footerLinks = {
     ],
     company: [
         { label: 'About', href: '/about' },
-        { label: 'Blog', href: '/blog' },
+
         { label: 'Careers', href: '#', comingSoon: true },
         { label: 'Partners', href: '#', comingSoon: true },
         { label: 'Press', href: '/contact' },

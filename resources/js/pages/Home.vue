@@ -9,14 +9,15 @@ import StatsBanner from '@/components/marketing/StatsBanner.vue';
 import TradeLogos from '@/components/marketing/TradeLogos.vue';
 import FeatureCard from '@/components/marketing/FeatureCard.vue';
 import FeatureShowcase from '@/components/marketing/FeatureShowcase.vue';
-import ComparisonTable from '@/components/marketing/ComparisonTable.vue';
-import TestimonialCarousel from '@/components/marketing/TestimonialCarousel.vue';
+
+
 import PricingCard from '@/components/marketing/PricingCard.vue';
 import WaitlistForm from '@/components/marketing/WaitlistForm.vue';
 import FaqAccordion from '@/components/marketing/FaqAccordion.vue';
 import { allFeatures } from '@/data/features';
 import { pricingPlans } from '@/data/pricing';
 import { generalFaqs } from '@/data/faqs';
+import { WAITLIST_DISPLAY, BETA_DISPLAY } from '@/data/stats';
 
 const isAnnual = ref(false);
 
@@ -68,23 +69,6 @@ const featureBlocks = [
     },
 ];
 
-const comparisonRows = [
-    { feature: 'Starting price', servicepro: '$79/mo', jobber: '$199/mo', housecall: '$169/mo' },
-    { feature: 'Free trial', servicepro: '14 days', jobber: '14 days', housecall: '14 days' },
-    { feature: 'Setup time', servicepro: 'Under 30 min', jobber: '2–4 hours', housecall: '2–3 hours' },
-    { feature: 'Scheduling', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Invoicing & Payments', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Two-way SMS', servicepro: true, jobber: 'Add-on', housecall: true },
-    { feature: 'GPS Tracking', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Customer Portal', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Automated Follow-ups', servicepro: true, jobber: 'Limited', housecall: true },
-    { feature: 'AI-powered features', servicepro: true, jobber: false, housecall: false },
-    { feature: 'Built for 1–10 staff', servicepro: true, jobber: 'Partial', housecall: 'Partial' },
-    { feature: 'No contract required', servicepro: true, jobber: true, housecall: true },
-    { feature: 'US-dedicated support', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Mobile-first design', servicepro: true, jobber: 'Partial', housecall: true },
-];
-
 const painPoints = [
     {
         icon: '📅',
@@ -115,7 +99,7 @@ onMounted(() => {
     jsonLdScript.textContent = JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'ServicePro',
+        name: 'Fieldix',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web, iOS, Android',
         offers: { '@type': 'Offer', price: '79', priceCurrency: 'USD' },
@@ -132,7 +116,7 @@ onUnmounted(() => {
 
 <template>
     <MarketingLayout
-        title="ServicePro — Field Service Management Software for Small Businesses"
+        title="Fieldix — Field Service Management Software for Small Businesses"
         description="Run your home service business like a pro. Scheduling, invoicing, and smart SMS for HVAC, plumbing, electrical, cleaning, and all home service crews. From $79/month."
     >
         <!-- SECTION 1: Hero -->
@@ -153,7 +137,7 @@ onUnmounted(() => {
                         </h1>
 
                         <p class="mt-6 max-w-2xl text-xl leading-relaxed text-neutral-300 mx-auto lg:mx-0">
-                            Scheduling, invoicing, and smart SMS follow-up — built for any home service crew of 1 to 10.
+                            Scheduling, invoicing, and smart SMS follow-up — built for any home service business.
                         </p>
 
                         <div class="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
@@ -161,13 +145,12 @@ onUnmounted(() => {
                                 Join the Waitlist — Free
                             </Button>
                             <Button
-                                href="https://www.youtube.com/@getservicepro"
+                                href="/features"
                                 variant="secondary"
                                 size="xl"
                                 class="border-white/30 bg-white/10 text-white hover:bg-white/20"
-                                external
                             >
-                                Watch 2-min Demo
+                                See How It Works →
                             </Button>
                         </div>
 
@@ -180,6 +163,9 @@ onUnmounted(() => {
                             </span>
                             <span class="flex items-center gap-2">
                                 <Check class="h-4 w-4 text-accent-400" /> Cancel any time
+                            </span>
+                            <span class="flex items-center gap-2 text-neutral-300">
+                                🇺🇸 US businesses only
                             </span>
                         </div>
                     </div>
@@ -196,7 +182,7 @@ onUnmounted(() => {
                                     <div class="h-3 w-3 rounded-full bg-green-400"></div>
                                 </div>
                                 <div class="flex-1 rounded bg-white/10 px-3 py-1 text-xs text-neutral-300 text-center">
-                                    app.getservicepro.com
+                                    app.getfieldix.com
                                 </div>
                             </div>
                             <!-- App content -->
@@ -301,7 +287,7 @@ onUnmounted(() => {
                     </div>
                 </div>
                 <div class="mt-12 text-center">
-                    <p class="text-xl font-semibold text-neutral-700">ServicePro fixes all three. Automatically.</p>
+                    <p class="text-xl font-semibold text-neutral-700">Fieldix fixes all three. Automatically.</p>
                     <ChevronDown class="mx-auto mt-4 h-6 w-6 text-neutral-400" />
                 </div>
             </div>
@@ -313,7 +299,7 @@ onUnmounted(() => {
                 <SectionHeader
                     eyebrow="How it works"
                     heading="Everything you need. Nothing you don't."
-                    subtext="ServicePro is built for crews of 1 to 10. No enterprise complexity. No 6-hour onboarding call. Just a clean, fast app that runs your business."
+                    subtext="Fieldix is built for crews of 1 to 10. No enterprise complexity. No 6-hour onboarding call. Just a clean, fast app that runs your business."
                 />
                 <div class="space-y-24">
                     <FeatureShowcase
@@ -345,46 +331,56 @@ onUnmounted(() => {
             </div>
         </section>
 
-        <!-- SECTION 7: Comparison Table -->
+        <!-- SECTION 7: Why Fieldix -->
         <section class="bg-white py-20 lg:py-28">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <SectionHeader
-                    eyebrow="How we compare"
-                    heading="More features. Half the price."
-                    subtext="ServicePro gives you 90% of what Jobber and Housecall Pro offer, at a fraction of the cost. No long-term contracts."
+                    eyebrow="Why Fieldix"
+                    heading="Everything you need. Nothing you don't."
+                    subtext="Enterprise field service tools cost hundreds per month and take weeks to set up. Fieldix gives you the same capabilities from $79/month — ready in under 30 minutes."
                 />
-                <ComparisonTable :rows="comparisonRows" />
-                <div class="mt-8 text-center">
-                    <Button href="https://app.getservicepro.com/register" variant="primary" size="lg" external>
-                        Try ServicePro free for 14 days — no credit card required
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div v-for="item in [
+                        { icon: '⚡', title: 'Up and running in under 30 minutes', body: 'No implementation consultant. No training call. Most businesses schedule their first job within an hour of signing up.' },
+                        { icon: '💰', title: 'From $79/month — no hidden fees', body: 'Flat monthly pricing. No per-job fees, no setup costs, no surprise charges. Cancel any time with no penalties.' },
+                        { icon: '👷', title: 'Built for crews of 1 to 10', body: 'Not a stripped-down enterprise tool. Fieldix is designed from the ground up for small home service businesses.' },
+                        { icon: '📱', title: 'Mobile-first, works everywhere', body: 'Manage jobs, send invoices, and check your schedule from any phone. iOS and Android — no separate app download required.' },
+                        { icon: '💬', title: 'Two-way SMS included', body: 'Automated follow-ups, quote reminders, and appointment notifications — all included. No add-on required.' },
+
+                    ]" :key="item.title" class="rounded-2xl border border-neutral-100 bg-neutral-50 p-6">
+                        <div class="mb-3 text-3xl">{{ item.icon }}</div>
+                        <h3 class="mb-2 font-semibold text-neutral-900">{{ item.title }}</h3>
+                        <p class="text-sm leading-relaxed text-neutral-500">{{ item.body }}</p>
+                    </div>
+                </div>
+                <div class="mt-10 text-center">
+                    <Button href="https://app.getfieldix.com/register" variant="primary" size="lg" external>
+                        Try Fieldix free for 14 days — no credit card required
                     </Button>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 8: Testimonials -->
+        <!-- SECTION 8: Beta stats -->
         <section class="bg-brand-950 py-20 lg:py-28">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <SectionHeader
-                    eyebrow="What our beta users say"
-                    heading="Home service businesses trust ServicePro"
-                    theme="dark"
-                />
-                <TestimonialCarousel />
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-sm font-semibold uppercase tracking-wider text-brand-400">Currently in beta</p>
+                <h2 class="mt-4 text-3xl font-bold text-white lg:text-4xl">{{ BETA_DISPLAY }} businesses already running on Fieldix</h2>
+                <p class="mt-4 text-lg text-neutral-400">Real testimonials from beta users coming soon.</p>
                 <div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-center">
                     <div>
-                        <div class="text-2xl font-bold text-white">4.9/5</div>
-                        <div class="text-sm text-neutral-400">Rated by beta users</div>
-                    </div>
-                    <div class="hidden h-8 w-px bg-white/10 sm:block"></div>
-                    <div>
                         <div class="text-2xl font-bold text-white">&lt;30 min</div>
-                        <div class="text-sm text-neutral-400">Zero to setup</div>
+                        <div class="text-sm text-neutral-400">Average setup time</div>
                     </div>
                     <div class="hidden h-8 w-px bg-white/10 sm:block"></div>
                     <div>
-                        <div class="text-2xl font-bold text-white">50+</div>
+                        <div class="text-2xl font-bold text-white">{{ BETA_DISPLAY }}</div>
                         <div class="text-sm text-neutral-400">Businesses in beta</div>
+                    </div>
+                    <div class="hidden h-8 w-px bg-white/10 sm:block"></div>
+                    <div>
+                        <div class="text-2xl font-bold text-white">{{ WAITLIST_DISPLAY }}</div>
+                        <div class="text-sm text-neutral-400">On the waitlist</div>
                     </div>
                 </div>
             </div>
@@ -454,7 +450,7 @@ onUnmounted(() => {
                             <li v-for="benefit in [
                                 '30-day free trial (standard is 14 days)',
                                 'Founding member rate — locked in for your first year',
-                                'Priority access before public launch on 1 May 2026',
+                                'Priority access before public launch on 1 June 2026',
                             ]" :key="benefit" class="flex items-start gap-3 text-white">
                                 <Check class="mt-0.5 h-5 w-5 shrink-0 text-accent-400" />
                                 {{ benefit }}
@@ -464,7 +460,7 @@ onUnmounted(() => {
                     <div class="flex-1">
                         <WaitlistForm variant="inline" />
                         <p class="mt-4 text-center text-sm text-blue-200">
-                            487 businesses already on the waitlist
+                            {{ WAITLIST_DISPLAY }} businesses already on the waitlist
                         </p>
                     </div>
                 </div>
@@ -479,8 +475,8 @@ onUnmounted(() => {
                     heading="Frequently asked questions"
                 />
                 <div class="grid gap-4 lg:grid-cols-2 lg:gap-8">
-                    <FaqAccordion :items="generalFaqs.slice(0, 5)" />
-                    <FaqAccordion :items="generalFaqs.slice(5)" />
+                    <FaqAccordion :items="generalFaqs.slice(0, 4)" />
+                    <FaqAccordion :items="generalFaqs.slice(4, 8)" />
                 </div>
             </div>
         </section>
@@ -489,7 +485,7 @@ onUnmounted(() => {
         <section class="bg-neutral-950 py-20 lg:py-28">
             <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-white lg:text-4xl">Ready to run your business like a pro?</h2>
-                <p class="mt-4 text-lg text-neutral-400">Join 487 home service businesses already on the waitlist.</p>
+                <p class="mt-4 text-lg text-neutral-400">Join {{ WAITLIST_DISPLAY }} home service businesses already on the waitlist.</p>
                 <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
                     <Button href="#waitlist" variant="success" size="xl">Join the Waitlist</Button>
                     <Button href="/pricing" variant="ghost" size="xl" class="text-white hover:bg-white/10 border border-white/20">

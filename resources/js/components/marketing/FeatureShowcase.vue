@@ -57,7 +57,7 @@ defineProps<Props>();
                         <div class="h-3 w-3 rounded-full bg-amber-400"></div>
                         <div class="h-3 w-3 rounded-full bg-green-400"></div>
                     </div>
-                    <div class="flex-1 rounded bg-white/10 px-3 py-1 text-xs text-neutral-300 text-center">app.getservicepro.com</div>
+                    <div class="flex-1 rounded bg-white/10 px-3 py-1 text-xs text-neutral-300 text-center">app.getfieldix.com</div>
                 </div>
                 <div class="p-4">
                     <div class="mb-3 flex items-center justify-between">
@@ -99,7 +99,7 @@ defineProps<Props>();
                 <div class="p-5">
                     <div class="mb-4 flex items-start justify-between">
                         <div>
-                            <div class="font-bold text-neutral-900 text-lg">ServicePro</div>
+                            <div class="font-bold text-neutral-900 text-lg">Fieldix</div>
                             <div class="text-xs text-neutral-500">hello@getservicepro.com</div>
                         </div>
                         <span class="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">PAID</span>

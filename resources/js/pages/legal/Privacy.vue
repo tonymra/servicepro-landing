@@ -4,8 +4,8 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
 
 <template>
     <MarketingLayout
-        title="Privacy Policy — ServicePro"
-        description="ServicePro's Privacy Policy explains how we collect, use, and protect your personal information."
+        title="Privacy Policy — Fieldix"
+        description="Fieldix's Privacy Policy explains how we collect, use, and protect your personal information."
     >
         <!-- Hero -->
         <section class="bg-neutral-50 border-b border-neutral-200 py-14">
@@ -23,13 +23,13 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                 <!-- Notice -->
                 <div class="mb-10 rounded-xl bg-blue-50 border border-blue-200 px-6 py-5">
                     <p class="text-sm text-blue-800 leading-relaxed">
-                        <span class="font-semibold">Notice:</span> This page is currently being finalised by our legal team and will be published before our public launch on 1 May 2026.
+                        <span class="font-semibold">Notice:</span> This page is currently being finalised by our legal team and will be published before our public launch on 1 June 2026.
                     </p>
                 </div>
 
                 <!-- Intro -->
                 <p class="text-neutral-700 leading-relaxed mb-12">
-                    ServicePro ("we", "us", or "our") is committed to protecting your personal information. This Privacy Policy explains what data we collect, why we collect it, how we use it, and the rights you have over your information.
+                    Fieldix ("we", "us", or "our") is committed to protecting your personal information. This Privacy Policy explains what data we collect, why we collect it, how we use it, and the rights you have over your information.
                 </p>
 
                 <!-- Sections -->
@@ -39,7 +39,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">1. Information We Collect</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            We collect information you provide directly — such as your name, email address, business name, and payment details when you register or use our services. We also collect information automatically when you use ServicePro, including IP addresses, browser type, pages visited, and usage patterns. Additionally, we may receive information from third-party integrations you connect to your account.
+                            We collect information you provide directly — such as your name, email address, business name, and payment details when you register or use our services. We also collect information automatically when you use Fieldix, including IP addresses, browser type, pages visited, and usage patterns. Additionally, we may receive information from third-party integrations you connect to your account.
                         </p>
                     </div>
 
@@ -47,7 +47,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">2. How We Use Your Information</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            We use collected information to provide, maintain, and improve the ServicePro platform; to process transactions and send related confirmations and invoices; to send transactional and (where consented) promotional communications; to respond to support requests; and to comply with legal obligations. You may opt out of promotional emails at any time using the unsubscribe link in any email.
+                            We use collected information to provide, maintain, and improve the Fieldix platform; to process transactions and send related confirmations and invoices; to send transactional and (where consented) promotional communications; to respond to support requests; and to comply with legal obligations. You may opt out of promotional emails at any time using the unsubscribe link in any email.
                         </p>
                     </div>
 
@@ -55,7 +55,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">3. Information Sharing</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating the platform — such as payment processors, cloud hosting providers, and analytics tools — under strict confidentiality agreements. We may also disclose information when required by law or to protect the rights and safety of ServicePro, our users, or the public.
+                            We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating the platform — such as payment processors, cloud hosting providers, and analytics tools — under strict confidentiality agreements. We may also disclose information when required by law or to protect the rights and safety of Fieldix, our users, or the public.
                         </p>
                     </div>
 
@@ -95,7 +95,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">8. Changes to This Policy</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            We may update this Privacy Policy from time to time. We will notify you of material changes by posting the revised policy on this page and updating the "Last updated" date above. We encourage you to review this policy periodically. Continued use of ServicePro after changes become effective constitutes your acceptance of the revised policy.
+                            We may update this Privacy Policy from time to time. We will notify you of material changes by posting the revised policy on this page and updating the "Last updated" date above. We encourage you to review this policy periodically. Continued use of Fieldix after changes become effective constitutes your acceptance of the revised policy.
                         </p>
                     </div>
 

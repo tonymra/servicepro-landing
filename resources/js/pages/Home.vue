@@ -9,7 +9,7 @@ import StatsBanner from '@/components/marketing/StatsBanner.vue';
 import TradeLogos from '@/components/marketing/TradeLogos.vue';
 import FeatureCard from '@/components/marketing/FeatureCard.vue';
 import FeatureShowcase from '@/components/marketing/FeatureShowcase.vue';
-import ComparisonTable from '@/components/marketing/ComparisonTable.vue';
+
 import TestimonialCarousel from '@/components/marketing/TestimonialCarousel.vue';
 import PricingCard from '@/components/marketing/PricingCard.vue';
 import WaitlistForm from '@/components/marketing/WaitlistForm.vue';
@@ -67,23 +67,6 @@ const featureBlocks = [
         imagePosition: 'right' as const,
         mockupType: 'sms' as const,
     },
-];
-
-const comparisonRows = [
-    { feature: 'Starting price', fieldix: '$79/mo', jobber: '$199/mo', housecall: '$169/mo' },
-    { feature: 'Free trial', fieldix: '14 days', jobber: '14 days', housecall: '14 days' },
-    { feature: 'Setup time', fieldix: 'Under 30 min', jobber: '2–4 hours', housecall: '2–3 hours' },
-    { feature: 'Scheduling', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Invoicing & Payments', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Two-way SMS', fieldix: true, jobber: 'Add-on', housecall: true },
-    { feature: 'GPS Tracking', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Customer Portal', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Automated Follow-ups', fieldix: true, jobber: 'Limited', housecall: true },
-    { feature: 'AI-powered features', fieldix: true, jobber: false, housecall: false },
-    { feature: 'Built for 1–10 staff', fieldix: true, jobber: 'Partial', housecall: 'Partial' },
-    { feature: 'No contract required', fieldix: true, jobber: true, housecall: true },
-    { feature: 'US-dedicated support', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Mobile-first design', fieldix: true, jobber: 'Partial', housecall: true },
 ];
 
 const painPoints = [
@@ -346,16 +329,29 @@ onUnmounted(() => {
             </div>
         </section>
 
-        <!-- SECTION 7: Comparison Table -->
+        <!-- SECTION 7: Why Fieldix -->
         <section class="bg-white py-20 lg:py-28">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <SectionHeader
-                    eyebrow="How we compare"
-                    heading="More features. Half the price."
-                    subtext="Fieldix gives you 90% of what Jobber and Housecall Pro offer, at a fraction of the cost. No long-term contracts."
+                    eyebrow="Why Fieldix"
+                    heading="Everything you need. Nothing you don't."
+                    subtext="Enterprise field service tools cost hundreds per month and take weeks to set up. Fieldix gives you the same capabilities from $79/month — ready in under 30 minutes."
                 />
-                <ComparisonTable :rows="comparisonRows" />
-                <div class="mt-8 text-center">
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div v-for="item in [
+                        { icon: '⚡', title: 'Up and running in under 30 minutes', body: 'No implementation consultant. No training call. Most businesses schedule their first job within an hour of signing up.' },
+                        { icon: '💰', title: 'From $79/month — no hidden fees', body: 'Flat monthly pricing. No per-job fees, no setup costs, no surprise charges. Cancel any time with no penalties.' },
+                        { icon: '👷', title: 'Built for crews of 1 to 10', body: 'Not a stripped-down enterprise tool. Fieldix is designed from the ground up for small home service businesses.' },
+                        { icon: '📱', title: 'Mobile-first, works everywhere', body: 'Manage jobs, send invoices, and check your schedule from any phone. iOS and Android — no separate app download required.' },
+                        { icon: '💬', title: 'Two-way SMS included', body: 'Automated follow-ups, quote reminders, and appointment notifications — all included. No add-on required.' },
+                        { icon: '🤖', title: 'AI-powered features', body: 'Smart scheduling suggestions, automatic invoice follow-ups, and predictive job notes. Built in — not bolted on.' },
+                    ]" :key="item.title" class="rounded-2xl border border-neutral-100 bg-neutral-50 p-6">
+                        <div class="mb-3 text-3xl">{{ item.icon }}</div>
+                        <h3 class="mb-2 font-semibold text-neutral-900">{{ item.title }}</h3>
+                        <p class="text-sm leading-relaxed text-neutral-500">{{ item.body }}</p>
+                    </div>
+                </div>
+                <div class="mt-10 text-center">
                     <Button href="https://app.getservicepro.com/register" variant="primary" size="lg" external>
                         Try Fieldix free for 14 days — no credit card required
                     </Button>

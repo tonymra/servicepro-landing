@@ -5,7 +5,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
 import SectionHeader from '@/components/ui/SectionHeader.vue';
 import Button from '@/components/ui/Button.vue';
 import PricingCard from '@/components/marketing/PricingCard.vue';
-import ComparisonTable from '@/components/marketing/ComparisonTable.vue';
+
 import FaqAccordion from '@/components/marketing/FaqAccordion.vue';
 import WaitlistForm from '@/components/marketing/WaitlistForm.vue';
 import { usePricing } from '@/composables/usePricing';
@@ -23,23 +23,6 @@ const addOns = computed(() => apiAddOns.value);
 onMounted(() => {
     fetchPricing();
 });
-
-const comparisonRows = [
-    { feature: 'Starting price', fieldix: '$79/mo', jobber: '$199/mo', housecall: '$169/mo' },
-    { feature: 'Free trial', fieldix: '14 days', jobber: '14 days', housecall: '14 days' },
-    { feature: 'Setup time', fieldix: 'Under 30 min', jobber: '2–4 hours', housecall: '2–3 hours' },
-    { feature: 'Scheduling', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Invoicing & Payments', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Two-way SMS', fieldix: true, jobber: 'Add-on', housecall: true },
-    { feature: 'GPS Tracking', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Customer Portal', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Automated Follow-ups', fieldix: true, jobber: 'Limited', housecall: true },
-    { feature: 'AI-powered features', fieldix: true, jobber: false, housecall: false },
-    { feature: 'Built for 1–10 staff', fieldix: true, jobber: 'Partial', housecall: 'Partial' },
-    { feature: 'No contract required', fieldix: true, jobber: true, housecall: true },
-    { feature: 'US-dedicated support', fieldix: true, jobber: true, housecall: true },
-    { feature: 'Mobile-first design', fieldix: true, jobber: 'Partial', housecall: true },
-];
 
 const waitlistBenefits = [
     '30-day free trial (standard is 14 days)',
@@ -130,16 +113,35 @@ const waitlistBenefits = [
             </div>
         </section>
 
-        <!-- Comparison Table -->
+        <!-- What you get -->
         <section class="bg-white py-20 lg:py-28">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                 <SectionHeader
-                    eyebrow="How we compare"
-                    heading="More features. Half the price."
-                    subtext="Fieldix gives you 90% of what Jobber and Housecall Pro offer, at a fraction of the cost."
+                    eyebrow="What's included"
+                    heading="What you get at $79/month"
+                    subtext="Enterprise field service platforms charge $200–$400/month for the same capabilities and require days to set up. Fieldix is ready in under 30 minutes."
                 />
-                <ComparisonTable :rows="comparisonRows" />
-                <div class="mt-8 text-center">
+                <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                    <div v-for="item in [
+                        { label: 'Job scheduling & dispatch', note: 'Drag-and-drop calendar, crew assignment, GPS check-in' },
+                        { label: 'Invoicing & online payments', note: 'Send invoices, collect card payments, track what\'s owed' },
+                        { label: 'Two-way SMS — included', note: 'No add-on fee. Automated follow-ups and client replies in one inbox' },
+                        { label: 'Automated quote follow-ups', note: 'Fieldix follows up 24 hours after every quote — automatically' },
+                        { label: 'Customer portal', note: 'Clients can view quotes, approve work, and pay online' },
+                        { label: 'AI-powered features', note: 'Smart scheduling suggestions and predictive job notes' },
+                        { label: 'GPS tracking', note: 'See your whole crew\'s location in real time' },
+                        { label: 'Mobile-first — no app download', note: 'Full functionality on iOS and Android browsers' },
+                        { label: 'No contract. Cancel any time.', note: 'Month-to-month. No cancellation fees. No lock-in.' },
+                        { label: '14-day free trial', note: 'No credit card required. Waitlist members get 30 days.' },
+                    ]" :key="item.label" class="flex items-start gap-3 rounded-xl border border-neutral-100 bg-neutral-50 px-5 py-4">
+                        <Check class="mt-0.5 h-5 w-5 shrink-0 text-accent-500" />
+                        <div>
+                            <p class="font-semibold text-neutral-900">{{ item.label }}</p>
+                            <p class="mt-0.5 text-sm text-neutral-500">{{ item.note }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 text-center">
                     <Button href="https://app.getservicepro.com/register" variant="primary" size="lg" external>
                         Try Fieldix free for 14 days — no credit card required
                     </Button>

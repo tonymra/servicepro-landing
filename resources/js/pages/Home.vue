@@ -10,7 +10,7 @@ import TradeLogos from '@/components/marketing/TradeLogos.vue';
 import FeatureCard from '@/components/marketing/FeatureCard.vue';
 import FeatureShowcase from '@/components/marketing/FeatureShowcase.vue';
 
-import TestimonialCarousel from '@/components/marketing/TestimonialCarousel.vue';
+
 import PricingCard from '@/components/marketing/PricingCard.vue';
 import WaitlistForm from '@/components/marketing/WaitlistForm.vue';
 import FaqAccordion from '@/components/marketing/FaqAccordion.vue';
@@ -358,29 +358,26 @@ onUnmounted(() => {
             </div>
         </section>
 
-        <!-- SECTION 8: Testimonials -->
+        <!-- SECTION 8: Beta stats -->
         <section class="bg-brand-950 py-20 lg:py-28">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <SectionHeader
-                    eyebrow="What our beta users say"
-                    heading="Home service businesses trust Fieldix"
-                    theme="dark"
-                />
-                <TestimonialCarousel />
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-sm font-semibold uppercase tracking-wider text-brand-400">Currently in beta</p>
+                <h2 class="mt-4 text-3xl font-bold text-white lg:text-4xl">{{ BETA_DISPLAY }} businesses already running on Fieldix</h2>
+                <p class="mt-4 text-lg text-neutral-400">Real testimonials from beta users coming soon.</p>
                 <div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-center">
                     <div>
-                        <div class="text-2xl font-bold text-white">4.9/5</div>
-                        <div class="text-sm text-neutral-400">Rated by beta users</div>
-                    </div>
-                    <div class="hidden h-8 w-px bg-white/10 sm:block"></div>
-                    <div>
                         <div class="text-2xl font-bold text-white">&lt;30 min</div>
-                        <div class="text-sm text-neutral-400">Zero to setup</div>
+                        <div class="text-sm text-neutral-400">Average setup time</div>
                     </div>
                     <div class="hidden h-8 w-px bg-white/10 sm:block"></div>
                     <div>
                         <div class="text-2xl font-bold text-white">{{ BETA_DISPLAY }}</div>
                         <div class="text-sm text-neutral-400">Businesses in beta</div>
+                    </div>
+                    <div class="hidden h-8 w-px bg-white/10 sm:block"></div>
+                    <div>
+                        <div class="text-2xl font-bold text-white">{{ WAITLIST_DISPLAY }}</div>
+                        <div class="text-sm text-neutral-400">On the waitlist</div>
                     </div>
                 </div>
             </div>

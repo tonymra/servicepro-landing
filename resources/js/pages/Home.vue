@@ -145,13 +145,12 @@ onUnmounted(() => {
                                 Join the Waitlist — Free
                             </Button>
                             <Button
-                                href="https://www.youtube.com/@getservicepro"
+                                href="/features"
                                 variant="secondary"
                                 size="xl"
                                 class="border-white/30 bg-white/10 text-white hover:bg-white/20"
-                                external
                             >
-                                Watch 2-min Demo
+                                See How It Works →
                             </Button>
                         </div>
 

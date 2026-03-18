@@ -34,7 +34,7 @@ defineEmits<{ close: [] }>();
                         <X class="h-5 w-5" />
                     </button>
                     <h2 class="mb-2 text-2xl font-bold text-white">Join the waitlist</h2>
-                    <p class="mb-6 text-neutral-300">Get 30 days free when we launch on June 1, 2026.</p>
+                    <p class="mb-6 text-neutral-300">Waitlist exclusive: get 30 days free at launch instead of the standard 14.</p>
                     <WaitlistForm variant="modal" />
                 </div>
             </div>

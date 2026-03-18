@@ -153,7 +153,7 @@ onUnmounted(() => {
                         </h1>
 
                         <p class="mt-6 max-w-2xl text-xl leading-relaxed text-neutral-300 mx-auto lg:mx-0">
-                            Scheduling, invoicing, and smart SMS follow-up — built for any home service crew of 1 to 10.
+                            Scheduling, invoicing, and smart SMS follow-up — built for any home service business.
                         </p>
 
                         <div class="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">

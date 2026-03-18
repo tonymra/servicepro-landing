@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { Check, ShieldCheck } from 'lucide-vue-next';
 import MarketingLayout from '@/layouts/MarketingLayout.vue';
 import SectionHeader from '@/components/ui/SectionHeader.vue';
@@ -8,16 +8,21 @@ import PricingCard from '@/components/marketing/PricingCard.vue';
 import ComparisonTable from '@/components/marketing/ComparisonTable.vue';
 import FaqAccordion from '@/components/marketing/FaqAccordion.vue';
 import WaitlistForm from '@/components/marketing/WaitlistForm.vue';
-import { pricingPlans } from '@/data/pricing';
+import { usePricing } from '@/composables/usePricing';
+import { pricingPlans as staticPlans } from '@/data/pricing';
 import { pricingFaqs } from '@/data/faqs';
+import ToggleSwitch from '@/components/ui/ToggleSwitch.vue';
 
 const isAnnual = ref(false);
 
-const addOns = [
-    { name: 'SMS Credits', price: '$0.025/message', description: 'Additional SMS beyond your plan allowance.' },
-    { name: 'Additional Users', price: '$15/user/month', description: 'Add team members beyond your plan limit.' },
-    { name: 'API Access', price: 'Business only — Included', description: 'Full REST API for custom integrations.' },
-];
+const { plans: apiPlans, addOns: apiAddOns, loading, error, fetchPricing } = usePricing();
+
+const plans = computed(() => (apiPlans.value.length > 0 ? apiPlans.value : staticPlans));
+const addOns = computed(() => apiAddOns.value);
+
+onMounted(() => {
+    fetchPricing();
+});
 
 const comparisonRows = [
     { feature: 'Starting price', servicepro: '$79/mo', jobber: '$199/mo', housecall: '$169/mo' },
@@ -64,32 +69,33 @@ const waitlistBenefits = [
         <section class="bg-neutral-50 py-20 lg:py-28">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <!-- Toggle -->
-                <div class="mb-12 flex items-center justify-center gap-4">
+                <div class="mb-12 flex items-center justify-center gap-3">
                     <span :class="['text-sm font-medium', !isAnnual ? 'text-neutral-900' : 'text-neutral-500']">Monthly</span>
-                    <button
-                        type="button"
-                        class="relative h-6 w-12 rounded-full transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
-                        :class="isAnnual ? 'bg-brand-600' : 'bg-neutral-300'"
-                        :aria-pressed="isAnnual"
-                        @click="isAnnual = !isAnnual"
-                    >
-                        <span
-                            class="absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform duration-200"
-                            :class="isAnnual ? 'translate-x-6' : 'translate-x-0.5'"
-                        ></span>
-                    </button>
+                    <ToggleSwitch v-model="isAnnual" />
                     <span :class="['text-sm font-medium', isAnnual ? 'text-neutral-900' : 'text-neutral-500']">
                         Annual <span class="font-semibold text-accent-500">(Save 20%)</span>
                     </span>
                 </div>
 
-                <div class="grid gap-8 md:grid-cols-3">
-                    <PricingCard v-for="plan in pricingPlans" :key="plan.id" :plan="plan" :is-annual="isAnnual" />
+                <!-- Loading skeleton -->
+                <div v-if="loading" class="grid gap-8 md:grid-cols-3">
+                    <div v-for="i in 3" :key="i" class="h-96 animate-pulse rounded-2xl bg-neutral-200" />
+                </div>
+
+                <!-- Error state -->
+                <p v-else-if="error" class="text-center text-sm text-red-500">{{ error }}</p>
+
+                <!-- Plan cards -->
+                <div v-else class="grid gap-8 md:grid-cols-3">
+                    <PricingCard v-for="plan in plans" :key="plan.id" :plan="plan" :is-annual="isAnnual" />
                 </div>
 
                 <p class="mt-8 text-center text-neutral-500">
                     Need more than 10 users?
                     <a href="/contact" class="font-semibold text-brand-600 hover:text-brand-700">Contact us for Enterprise pricing →</a>
+                </p>
+                <p class="mt-4 text-center text-xs text-neutral-400">
+                    * Pricing and features accurate as of March 2026. Subject to change.
                 </p>
             </div>
         </section>

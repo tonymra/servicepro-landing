@@ -5,44 +5,52 @@ export interface FaqItem {
 
 export const generalFaqs: FaqItem[] = [
     {
-        question: 'When does Fieldix launch?',
-        answer: 'We launch publicly on 1 June 2026. Beta access begins 1 April 2026 for waitlist members.',
+        question: 'Is there a free trial?',
+        answer: 'Yes — 14 days free, no credit card required. If you join the waitlist before launch, you get 30 days free instead. You only enter payment details when you choose to subscribe.',
     },
     {
-        question: 'Do I need a credit card to sign up?',
-        answer: 'No. Your 14-day free trial (or 30-day waitlist trial) requires no credit card. You only enter payment details when you choose to subscribe.',
+        question: 'Can I cancel at any time?',
+        answer: 'Yes. There are no long-term contracts or cancellation fees. Cancel any time from your account settings and you\'ll retain access until the end of your current billing period.',
     },
     {
-        question: 'Which home service businesses does Fieldix work for?',
-        answer: 'Fieldix is currently available for US-based home service businesses only. It\'s built for small to medium operations — including HVAC, plumbing, electrical, cleaning, handyman, landscaping, pest control, painting, appliance repair, and many more trades.',
+        question: 'Does it work on mobile?',
+        answer: 'Yes. Fieldix is mobile-first and runs fully in iOS and Android browsers — no separate app download required. A dedicated native app is on our roadmap.',
+    },
+    {
+        question: 'Do my clients need to download an app?',
+        answer: 'No. Clients receive a link via SMS or email. They can view quotes, approve work, and pay online from any phone or browser — no account or app needed.',
+    },
+    {
+        question: 'Is Fieldix available outside the US?',
+        answer: 'Not yet. Fieldix is currently available for US-based businesses only. We\'re focused on building the best possible product for the US home service market before expanding internationally.',
+    },
+    {
+        question: 'What payment methods can my clients use?',
+        answer: 'Clients can pay by credit card, debit card, Apple Pay, and Google Pay. Payments are processed securely through Stripe. Funds are deposited directly to your bank account.',
     },
     {
         question: 'How long does setup take?',
-        answer: 'Most business owners are fully set up — jobs scheduled, team added, and first invoice sent — in under 30 minutes. There\'s no training call required.',
+        answer: 'Most business owners are fully set up — jobs scheduled, team added, and first invoice sent — in under 30 minutes. No training call required.',
     },
     {
-        question: 'Can I use Fieldix on my phone?',
-        answer: 'Yes. Fieldix is mobile-first. Everything works on iOS and Android browsers without downloading a separate app. A native app is on our roadmap.',
+        question: 'What happens when my trial ends?',
+        answer: 'You\'ll be prompted to choose a plan. If you don\'t subscribe, your account is paused — your data is kept for 30 days so you can pick up where you left off. Nothing is deleted immediately.',
+    },
+    {
+        question: 'Which trades does Fieldix support?',
+        answer: 'Fieldix is built for US-based home service businesses — including HVAC, plumbing, electrical, cleaning, handyman, landscaping, pest control, painting, appliance repair, and more.',
+    },
+    {
+        question: 'When does Fieldix launch?',
+        answer: 'Public launch is 1 June 2026. Beta access begins 1 April 2026 for waitlist members, who also get a 30-day free trial instead of the standard 14 days.',
     },
     {
         question: 'How does the SMS follow-up work?',
-        answer: 'When you send a quote, Fieldix automatically sends a follow-up SMS to your client 24 hours later. If they reply, you see the conversation in your inbox. No manual follow-up required.',
-    },
-    {
-        question: 'What does Fieldix cost?',
-        answer: 'Plans start at $79/month for solo operators up to $299/month for teams of up to 10. Annual billing saves 20%. See our full pricing page for details.',
-    },
-    {
-        question: 'How is Fieldix different from other field service software?',
-        answer: 'Most field service platforms are built for large operations — they\'re expensive, complex to set up, and assume you have an office manager or IT team. Fieldix is purpose-built for crews of 1–10. You get the same core capabilities at a fraction of the price, with setup in under 30 minutes.',
+        answer: 'When you send a quote, Fieldix automatically follows up with your client by SMS 24 hours later. If they reply, the conversation appears in your inbox. No manual follow-up needed.',
     },
     {
         question: 'Can I import my existing customer data?',
-        answer: 'Yes. You can import customers from a CSV file. We also offer a free onboarding call for Professional and Business plan users to help with data migration.',
-    },
-    {
-        question: 'What happens to my data if I cancel?',
-        answer: 'You retain full ownership of your data. We provide a full export in CSV format at any time. If you cancel, your data is retained for 30 days before deletion.',
+        answer: 'Yes. You can import customers from a CSV file. Professional and Business plan users also get a free onboarding call to help with data migration.',
     },
 ];
 

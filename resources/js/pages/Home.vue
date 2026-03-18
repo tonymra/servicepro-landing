@@ -475,8 +475,8 @@ onUnmounted(() => {
                     heading="Frequently asked questions"
                 />
                 <div class="grid gap-4 lg:grid-cols-2 lg:gap-8">
-                    <FaqAccordion :items="generalFaqs.slice(0, 5)" />
-                    <FaqAccordion :items="generalFaqs.slice(5)" />
+                    <FaqAccordion :items="generalFaqs.slice(0, 4)" />
+                    <FaqAccordion :items="generalFaqs.slice(4, 8)" />
                 </div>
             </div>
         </section>

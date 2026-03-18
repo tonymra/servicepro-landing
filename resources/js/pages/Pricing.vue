@@ -128,7 +128,6 @@ const waitlistBenefits = [
                         { label: 'Two-way SMS — included', note: 'No add-on fee. Automated follow-ups and client replies in one inbox' },
                         { label: 'Automated quote follow-ups', note: 'Fieldix follows up 24 hours after every quote — automatically' },
                         { label: 'Customer portal', note: 'Clients can view quotes, approve work, and pay online' },
-                        { label: 'AI-powered features', note: 'Smart scheduling suggestions and predictive job notes' },
                         { label: 'GPS tracking', note: 'See your whole crew\'s location in real time' },
                         { label: 'Mobile-first — no app download', note: 'Full functionality on iOS and Android browsers' },
                         { label: 'No contract. Cancel any time.', note: 'Month-to-month. No cancellation fees. No lock-in.' },

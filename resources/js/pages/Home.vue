@@ -343,7 +343,7 @@ onUnmounted(() => {
                         { icon: '👷', title: 'Built for crews of 1 to 10', body: 'Not a stripped-down enterprise tool. Fieldix is designed from the ground up for small home service businesses.' },
                         { icon: '📱', title: 'Mobile-first, works everywhere', body: 'Manage jobs, send invoices, and check your schedule from any phone. iOS and Android — no separate app download required.' },
                         { icon: '💬', title: 'Two-way SMS included', body: 'Automated follow-ups, quote reminders, and appointment notifications — all included. No add-on required.' },
-                        { icon: '🤖', title: 'AI-powered features', body: 'Smart scheduling suggestions, automatic invoice follow-ups, and predictive job notes. Built in — not bolted on.' },
+
                     ]" :key="item.title" class="rounded-2xl border border-neutral-100 bg-neutral-50 p-6">
                         <div class="mb-3 text-3xl">{{ item.icon }}</div>
                         <h3 class="mb-2 font-semibold text-neutral-900">{{ item.title }}</h3>

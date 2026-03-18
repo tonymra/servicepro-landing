@@ -43,7 +43,7 @@ const currentYear = new Date().getFullYear();
                 <!-- Brand column -->
                 <div>
                     <Link href="/" class="inline-block">
-                        <img src="/assets/images/logo.png" alt="ServicePro" class="h-10 w-auto" />
+                        <img src="/assets/images/logo.png" alt="Fieldix" class="h-10 w-auto" />
                     </Link>
                     <p class="mt-4 text-sm leading-relaxed text-neutral-400">
                         Field service management software built for small home service businesses.
@@ -132,7 +132,7 @@ const currentYear = new Date().getFullYear();
         <!-- Bottom bar -->
         <div class="border-t border-white/10">
             <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-neutral-500 sm:flex-row sm:px-6 lg:px-8">
-                <span>© {{ currentYear }} ServicePro LLC. All rights reserved. Registered in the United States.</span>
+                <span>© {{ currentYear }} Fieldix LLC. All rights reserved.</span>
                 <span>Made for home service businesses.</span>
             </div>
         </div>

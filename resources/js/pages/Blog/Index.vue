@@ -6,7 +6,7 @@ import WaitlistForm from '@/components/marketing/WaitlistForm.vue';
 const posts = [
     { title: '5 Ways HVAC Businesses Lose $500/Month (And How to Fix It)', category: 'Business Tips', excerpt: 'Most HVAC owners don\'t realize how much revenue slips through the cracks every month. Here are the five most common — and how to close them.', readTime: '5 min read', date: 'Feb 15, 2026', gradient: 'from-blue-500 to-blue-700' },
     { title: 'How to Send Invoices Clients Actually Pay in 24 Hours', category: 'How-To', excerpt: 'The timing, format, and follow-up method you use for invoices has a massive impact on how quickly you get paid. Here\'s what works.', readTime: '4 min read', date: 'Feb 10, 2026', gradient: 'from-green-500 to-green-700' },
-    { title: 'The Field Service Software Comparison: What Small Crews Actually Need', category: 'Industry', excerpt: 'Jobber vs Housecall Pro vs ServicePro — a no-BS comparison from the perspective of a 3-person home service crew.', readTime: '7 min read', date: 'Feb 5, 2026', gradient: 'from-purple-500 to-purple-700' },
+    { title: 'The Field Service Software Comparison: What Small Crews Actually Need', category: 'Industry', excerpt: 'Jobber vs Housecall Pro vs Fieldix — a no-BS comparison from the perspective of a 3-person home service crew.', readTime: '7 min read', date: 'Feb 5, 2026', gradient: 'from-purple-500 to-purple-700' },
     { title: 'GPS Tracking for Service Crews: Is It Worth It?', category: 'Business Tips', excerpt: 'GPS tracking raises valid concerns about trust and privacy. But for most home service businesses, the ROI is undeniable. Here\'s our take.', readTime: '3 min read', date: 'Jan 28, 2026', gradient: 'from-amber-500 to-amber-700' },
     { title: 'Stop Chasing Quotes: Automate Your Follow-up Process', category: 'How-To', excerpt: 'Sending a quote and never following up is leaving money on the table. Here\'s how to set up automatic follow-ups that don\'t feel spammy.', readTime: '4 min read', date: 'Jan 20, 2026', gradient: 'from-red-500 to-red-700' },
     { title: 'Pricing Your HVAC Services in 2026: A Practical Guide', category: 'Industry', excerpt: 'Labor costs, material prices, and competition have all shifted. Here\'s how to price your HVAC services profitably in today\'s market.', readTime: '6 min read', date: 'Jan 12, 2026', gradient: 'from-teal-500 to-teal-700' },
@@ -17,13 +17,13 @@ const categories = ['Business Tips', 'How-To', 'Industry', 'Productivity', 'Tech
 
 <template>
     <MarketingLayout
-        title="Blog — ServicePro"
+        title="Blog — Fieldix"
         description="Tips, guides, and insights for home service business owners."
     >
         <!-- Hero -->
         <section class="bg-white pt-32 pb-16 border-b border-neutral-100">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <h1 class="text-4xl font-extrabold text-neutral-900 lg:text-5xl">The ServicePro Blog</h1>
+                <h1 class="text-4xl font-extrabold text-neutral-900 lg:text-5xl">The Fieldix Blog</h1>
                 <p class="mt-4 text-xl text-neutral-500">Tips, guides, and insights for home service business owners.</p>
             </div>
         </section>
@@ -36,7 +36,7 @@ const categories = ['Business Tips', 'How-To', 'Industry', 'Productivity', 'Tech
                         <!-- Coming soon banner -->
                         <div class="mb-8 rounded-2xl bg-brand-50 border border-brand-200 px-6 py-4">
                             <p class="text-sm font-medium text-brand-700">
-                                📝 Full blog launching with ServicePro in May 2026. These are preview posts.
+                                📝 Full blog launching with Fieldix in June 2026. These are preview posts.
                             </p>
                         </div>
 
@@ -82,7 +82,7 @@ const categories = ['Business Tips', 'How-To', 'Industry', 'Productivity', 'Tech
                         <!-- Coming soon -->
                         <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 text-center">
                             <div class="text-2xl mb-2">📅</div>
-                            <h3 class="font-semibold text-neutral-900 mb-1">Full blog — May 2026</h3>
+                            <h3 class="font-semibold text-neutral-900 mb-1">Full blog — June 2026</h3>
                             <p class="text-sm text-neutral-500">Weekly posts on growing your home service business.</p>
                         </div>
                     </div>

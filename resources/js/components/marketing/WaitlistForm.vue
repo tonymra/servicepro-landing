@@ -125,7 +125,7 @@ const shareUrl = typeof window !== 'undefined' ? window.location.origin : 'https
         <p class="text-neutral-200 leading-relaxed">
             {{ alreadyExisted
                 ? "We already have your spot reserved. You're good!"
-                : `We'll email you at ${submittedEmail} when we launch. Expect something from hello@getservicepro.com on 1 May 2026.`
+                : `We'll email you at ${submittedEmail} when we launch. Expect something from hello@getservicepro.com on 1 June 2026.`
             }}
         </p>
         <div v-if="!alreadyExisted" class="mt-6 flex flex-wrap justify-center gap-3">

@@ -4,8 +4,8 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
 
 <template>
     <MarketingLayout
-        title="Terms of Service — ServicePro"
-        description="Read ServicePro's Terms of Service to understand your rights and responsibilities when using our platform."
+        title="Terms of Service — Fieldix"
+        description="Read Fieldix's Terms of Service to understand your rights and responsibilities when using our platform."
     >
         <!-- Hero -->
         <section class="bg-neutral-50 border-b border-neutral-200 py-14">
@@ -23,13 +23,13 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                 <!-- Notice -->
                 <div class="mb-10 rounded-xl bg-blue-50 border border-blue-200 px-6 py-5">
                     <p class="text-sm text-blue-800 leading-relaxed">
-                        <span class="font-semibold">Notice:</span> This page is currently being finalised by our legal team and will be published before our public launch on 1 May 2026.
+                        <span class="font-semibold">Notice:</span> This page is currently being finalised by our legal team and will be published before our public launch on 1 June 2026.
                     </p>
                 </div>
 
                 <!-- Intro -->
                 <p class="text-neutral-700 leading-relaxed mb-12">
-                    These Terms of Service ("Terms") govern your access to and use of the ServicePro platform and services. By creating an account or using ServicePro, you agree to be bound by these Terms. Please read them carefully.
+                    These Terms of Service ("Terms") govern your access to and use of the Fieldix platform and services. By creating an account or using Fieldix, you agree to be bound by these Terms. Please read them carefully.
                 </p>
 
                 <!-- Sections -->
@@ -39,7 +39,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">1. Acceptance of Terms</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            By accessing or using ServicePro, you confirm that you are at least 18 years of age, that you have the legal authority to enter into these Terms on behalf of yourself or your business, and that you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you must not use ServicePro.
+                            By accessing or using Fieldix, you confirm that you are at least 18 years of age, that you have the legal authority to enter into these Terms on behalf of yourself or your business, and that you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you must not use Fieldix.
                         </p>
                     </div>
 
@@ -47,7 +47,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">2. Service Description</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            ServicePro is a business management platform designed for home service professionals, including HVAC technicians, plumbers, electricians, cleaning businesses, and other field service trades. The platform provides tools for job scheduling, dispatch, invoicing, payment collection, and SMS-based client communication. We reserve the right to modify, suspend, or discontinue any part of the service at any time with reasonable notice.
+                            Fieldix is a business management platform designed for home service professionals, including HVAC technicians, plumbers, electricians, cleaning businesses, and other field service trades. The platform provides tools for job scheduling, dispatch, invoicing, payment collection, and SMS-based client communication. We reserve the right to modify, suspend, or discontinue any part of the service at any time with reasonable notice.
                         </p>
                     </div>
 
@@ -55,7 +55,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">3. Account Registration</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            To use ServicePro, you must create an account and provide accurate, complete, and current information. You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. You must notify us immediately of any unauthorised use of your account. We reserve the right to terminate accounts that violate these Terms.
+                            To use Fieldix, you must create an account and provide accurate, complete, and current information. You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. You must notify us immediately of any unauthorised use of your account. We reserve the right to terminate accounts that violate these Terms.
                         </p>
                     </div>
 
@@ -71,7 +71,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">5. Acceptable Use</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            You agree to use ServicePro only for lawful business purposes and in accordance with these Terms. You must not use the platform to send unsolicited communications, engage in fraudulent activity, infringe on the intellectual property of others, transmit harmful or malicious code, or attempt to gain unauthorised access to our systems or those of other users.
+                            You agree to use Fieldix only for lawful business purposes and in accordance with these Terms. You must not use the platform to send unsolicited communications, engage in fraudulent activity, infringe on the intellectual property of others, transmit harmful or malicious code, or attempt to gain unauthorised access to our systems or those of other users.
                         </p>
                     </div>
 
@@ -79,7 +79,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">6. Intellectual Property</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            ServicePro and all of its content, features, and functionality — including software, text, graphics, logos, and trademarks — are owned by ServicePro and protected by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable licence to use the platform for your business purposes. You retain ownership of all data and content you upload to ServicePro.
+                            Fieldix and all of its content, features, and functionality — including software, text, graphics, logos, and trademarks — are owned by Fieldix and protected by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable licence to use the platform for your business purposes. You retain ownership of all data and content you upload to Fieldix.
                         </p>
                     </div>
 
@@ -87,7 +87,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">7. Limitation of Liability</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            To the fullest extent permitted by law, ServicePro shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, the platform. Our total cumulative liability to you for any claims arising under these Terms shall not exceed the amount you paid to ServicePro in the three months preceding the claim.
+                            To the fullest extent permitted by law, Fieldix shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, the platform. Our total cumulative liability to you for any claims arising under these Terms shall not exceed the amount you paid to Fieldix in the three months preceding the claim.
                         </p>
                     </div>
 
@@ -95,7 +95,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">8. Indemnification</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            You agree to indemnify, defend, and hold harmless ServicePro and its officers, directors, employees, and agents from any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in connection with your use of the platform, your violation of these Terms, or your violation of any third-party rights.
+                            You agree to indemnify, defend, and hold harmless Fieldix and its officers, directors, employees, and agents from any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in connection with your use of the platform, your violation of these Terms, or your violation of any third-party rights.
                         </p>
                     </div>
 
@@ -103,7 +103,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">9. Termination</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            You may cancel your ServicePro account at any time from your account settings. We may suspend or terminate your access immediately, without prior notice, if we determine that you have violated these Terms or that your use of the platform poses a risk to ServicePro or other users. Upon termination, your right to use the platform ceases immediately.
+                            You may cancel your Fieldix account at any time from your account settings. We may suspend or terminate your access immediately, without prior notice, if we determine that you have violated these Terms or that your use of the platform poses a risk to Fieldix or other users. Upon termination, your right to use the platform ceases immediately.
                         </p>
                     </div>
 
@@ -111,7 +111,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">10. Governing Law (Delaware, USA)</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            These Terms are governed by and construed in accordance with the laws of the State of Delaware, USA, without regard to its conflict of law provisions. You agree that any legal action or proceeding relating to these Terms or your use of ServicePro shall be brought exclusively in the state or federal courts located in Delaware.
+                            These Terms are governed by and construed in accordance with the laws of the State of Delaware, USA, without regard to its conflict of law provisions. You agree that any legal action or proceeding relating to these Terms or your use of Fieldix shall be brought exclusively in the state or federal courts located in Delaware.
                         </p>
                     </div>
 

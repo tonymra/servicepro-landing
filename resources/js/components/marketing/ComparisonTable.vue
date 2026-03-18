@@ -4,7 +4,7 @@ import Badge from '@/components/ui/Badge.vue';
 
 interface TableRow {
     feature: string;
-    servicepro: string | boolean;
+    fieldix: string | boolean;
     jobber: string | boolean;
     housecall: string | boolean;
 }
@@ -30,7 +30,7 @@ withDefaults(defineProps<Props>(), {
                     <th class="relative bg-brand-50 px-6 py-4 text-center text-sm font-semibold text-brand-900 outline outline-2 outline-brand-500">
                         <div class="flex flex-col items-center gap-1">
                             <Badge variant="brand">Best Value</Badge>
-                            <span>ServicePro</span>
+                            <span>Fieldix</span>
                         </div>
                     </th>
                     <th class="bg-neutral-50 px-6 py-4 text-center text-sm font-semibold text-neutral-700">
@@ -45,8 +45,8 @@ withDefaults(defineProps<Props>(), {
                 <tr v-for="row in rows" :key="row.feature" class="divide-x divide-neutral-100 hover:bg-neutral-50">
                     <td class="px-6 py-3 text-sm font-medium text-neutral-700">{{ row.feature }}</td>
                     <td class="bg-brand-50/30 px-6 py-3 text-center">
-                        <span v-if="typeof row.servicepro === 'string'" class="text-sm font-semibold text-brand-700">{{ row.servicepro }}</span>
-                        <Check v-else-if="row.servicepro === true" class="mx-auto h-5 w-5 text-accent-500" />
+                        <span v-if="typeof row.fieldix === 'string'" class="text-sm font-semibold text-brand-700">{{ row.fieldix }}</span>
+                        <Check v-else-if="row.fieldix === true" class="mx-auto h-5 w-5 text-accent-500" />
                         <Minus v-else class="mx-auto h-5 w-5 text-neutral-300" />
                     </td>
                     <td class="px-6 py-3 text-center">

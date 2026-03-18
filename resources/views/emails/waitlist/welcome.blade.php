@@ -1,13 +1,13 @@
 <x-mail::message>
 # Hi {{ $firstName }}, you're on the list! 🎉
 
-You've successfully joined the ServicePro waitlist. Here's what happens next:
+You've successfully joined the Fieldix waitlist. Here's what happens next:
 
-**1. We're finishing up ServicePro** — Our team is putting the final touches on the product.
+**1. We're finishing up Fieldix** — Our team is putting the final touches on the product.
 
 **2. Beta starts April 1, 2026** — You'll be invited to beta before the public. As a waitlist member, you get priority access.
 
-**3. Public launch May 1, 2026** — You get **30 days free** (the standard trial is only 14 days).
+**3. Public launch June 1, 2026** — You get **30 days free** (the standard trial is only 14 days).
 
 ---
 
@@ -17,7 +17,7 @@ You've successfully joined the ServicePro waitlist. Here's what happens next:
 
 ✅ **Founding member pricing** — locked in for your first year
 
-✅ **Priority access** before the public launch on May 1, 2026
+✅ **Priority access** before the public launch on June 1, 2026
 
 ---
 
@@ -30,10 +30,10 @@ Visit getservicepro.com
 If you have questions in the meantime, just reply to this email.
 
 Cheers,<br>
-The ServicePro Team<br>
+The Fieldix Team<br>
 *hello@getservicepro.com*
 
 ---
-*ServicePro LLC, 1309 Coffeen Avenue STE 1200, Sheridan, WY 82801*<br>
+*Fieldix LLC, 1309 Coffeen Avenue STE 1200, Sheridan, WY 82801*<br>
 *You're receiving this because you signed up at getservicepro.com.*
 </x-mail::message>

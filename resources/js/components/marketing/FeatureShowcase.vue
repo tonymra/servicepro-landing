@@ -99,7 +99,7 @@ defineProps<Props>();
                 <div class="p-5">
                     <div class="mb-4 flex items-start justify-between">
                         <div>
-                            <div class="font-bold text-neutral-900 text-lg">ServicePro</div>
+                            <div class="font-bold text-neutral-900 text-lg">Fieldix</div>
                             <div class="text-xs text-neutral-500">hello@getservicepro.com</div>
                         </div>
                         <span class="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">PAID</span>

@@ -45,7 +45,7 @@ export const socialLinks: SocialLink[] = [
     {
         platform: 'LinkedIn',
         url: 'https://www.linkedin.com/company/getservicepro',
-        handle: 'ServicePro',
+        handle: 'Fieldix',
         icon: 'linkedin',
         color: '#0A66C2',
     },

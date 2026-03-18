@@ -70,20 +70,20 @@ const featureBlocks = [
 ];
 
 const comparisonRows = [
-    { feature: 'Starting price', servicepro: '$79/mo', jobber: '$199/mo', housecall: '$169/mo' },
-    { feature: 'Free trial', servicepro: '14 days', jobber: '14 days', housecall: '14 days' },
-    { feature: 'Setup time', servicepro: 'Under 30 min', jobber: '2–4 hours', housecall: '2–3 hours' },
-    { feature: 'Scheduling', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Invoicing & Payments', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Two-way SMS', servicepro: true, jobber: 'Add-on', housecall: true },
-    { feature: 'GPS Tracking', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Customer Portal', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Automated Follow-ups', servicepro: true, jobber: 'Limited', housecall: true },
-    { feature: 'AI-powered features', servicepro: true, jobber: false, housecall: false },
-    { feature: 'Built for 1–10 staff', servicepro: true, jobber: 'Partial', housecall: 'Partial' },
-    { feature: 'No contract required', servicepro: true, jobber: true, housecall: true },
-    { feature: 'US-dedicated support', servicepro: true, jobber: true, housecall: true },
-    { feature: 'Mobile-first design', servicepro: true, jobber: 'Partial', housecall: true },
+    { feature: 'Starting price', fieldix: '$79/mo', jobber: '$199/mo', housecall: '$169/mo' },
+    { feature: 'Free trial', fieldix: '14 days', jobber: '14 days', housecall: '14 days' },
+    { feature: 'Setup time', fieldix: 'Under 30 min', jobber: '2–4 hours', housecall: '2–3 hours' },
+    { feature: 'Scheduling', fieldix: true, jobber: true, housecall: true },
+    { feature: 'Invoicing & Payments', fieldix: true, jobber: true, housecall: true },
+    { feature: 'Two-way SMS', fieldix: true, jobber: 'Add-on', housecall: true },
+    { feature: 'GPS Tracking', fieldix: true, jobber: true, housecall: true },
+    { feature: 'Customer Portal', fieldix: true, jobber: true, housecall: true },
+    { feature: 'Automated Follow-ups', fieldix: true, jobber: 'Limited', housecall: true },
+    { feature: 'AI-powered features', fieldix: true, jobber: false, housecall: false },
+    { feature: 'Built for 1–10 staff', fieldix: true, jobber: 'Partial', housecall: 'Partial' },
+    { feature: 'No contract required', fieldix: true, jobber: true, housecall: true },
+    { feature: 'US-dedicated support', fieldix: true, jobber: true, housecall: true },
+    { feature: 'Mobile-first design', fieldix: true, jobber: 'Partial', housecall: true },
 ];
 
 const painPoints = [
@@ -116,7 +116,7 @@ onMounted(() => {
     jsonLdScript.textContent = JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'ServicePro',
+        name: 'Fieldix',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web, iOS, Android',
         offers: { '@type': 'Offer', price: '79', priceCurrency: 'USD' },
@@ -133,7 +133,7 @@ onUnmounted(() => {
 
 <template>
     <MarketingLayout
-        title="ServicePro — Field Service Management Software for Small Businesses"
+        title="Fieldix — Field Service Management Software for Small Businesses"
         description="Run your home service business like a pro. Scheduling, invoicing, and smart SMS for HVAC, plumbing, electrical, cleaning, and all home service crews. From $79/month."
     >
         <!-- SECTION 1: Hero -->
@@ -302,7 +302,7 @@ onUnmounted(() => {
                     </div>
                 </div>
                 <div class="mt-12 text-center">
-                    <p class="text-xl font-semibold text-neutral-700">ServicePro fixes all three. Automatically.</p>
+                    <p class="text-xl font-semibold text-neutral-700">Fieldix fixes all three. Automatically.</p>
                     <ChevronDown class="mx-auto mt-4 h-6 w-6 text-neutral-400" />
                 </div>
             </div>
@@ -314,7 +314,7 @@ onUnmounted(() => {
                 <SectionHeader
                     eyebrow="How it works"
                     heading="Everything you need. Nothing you don't."
-                    subtext="ServicePro is built for crews of 1 to 10. No enterprise complexity. No 6-hour onboarding call. Just a clean, fast app that runs your business."
+                    subtext="Fieldix is built for crews of 1 to 10. No enterprise complexity. No 6-hour onboarding call. Just a clean, fast app that runs your business."
                 />
                 <div class="space-y-24">
                     <FeatureShowcase
@@ -352,12 +352,12 @@ onUnmounted(() => {
                 <SectionHeader
                     eyebrow="How we compare"
                     heading="More features. Half the price."
-                    subtext="ServicePro gives you 90% of what Jobber and Housecall Pro offer, at a fraction of the cost. No long-term contracts."
+                    subtext="Fieldix gives you 90% of what Jobber and Housecall Pro offer, at a fraction of the cost. No long-term contracts."
                 />
                 <ComparisonTable :rows="comparisonRows" />
                 <div class="mt-8 text-center">
                     <Button href="https://app.getservicepro.com/register" variant="primary" size="lg" external>
-                        Try ServicePro free for 14 days — no credit card required
+                        Try Fieldix free for 14 days — no credit card required
                     </Button>
                 </div>
             </div>
@@ -368,7 +368,7 @@ onUnmounted(() => {
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <SectionHeader
                     eyebrow="What our beta users say"
-                    heading="Home service businesses trust ServicePro"
+                    heading="Home service businesses trust Fieldix"
                     theme="dark"
                 />
                 <TestimonialCarousel />
@@ -455,7 +455,7 @@ onUnmounted(() => {
                             <li v-for="benefit in [
                                 '30-day free trial (standard is 14 days)',
                                 'Founding member rate — locked in for your first year',
-                                'Priority access before public launch on 1 May 2026',
+                                'Priority access before public launch on 1 June 2026',
                             ]" :key="benefit" class="flex items-start gap-3 text-white">
                                 <Check class="mt-0.5 h-5 w-5 shrink-0 text-accent-400" />
                                 {{ benefit }}

@@ -4,8 +4,8 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
 
 <template>
     <MarketingLayout
-        title="Security — ServicePro"
-        description="Learn how ServicePro protects your business data with enterprise-grade security practices."
+        title="Security — Fieldix"
+        description="Learn how Fieldix protects your business data with enterprise-grade security practices."
     >
         <!-- Hero -->
         <section class="bg-neutral-50 border-b border-neutral-200 py-14">
@@ -23,13 +23,13 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                 <!-- Notice -->
                 <div class="mb-10 rounded-xl bg-blue-50 border border-blue-200 px-6 py-5">
                     <p class="text-sm text-blue-800 leading-relaxed">
-                        <span class="font-semibold">Notice:</span> This page is currently being finalised by our legal team and will be published before our public launch on 1 May 2026.
+                        <span class="font-semibold">Notice:</span> This page is currently being finalised by our legal team and will be published before our public launch on 1 June 2026.
                     </p>
                 </div>
 
                 <!-- Intro -->
                 <p class="text-neutral-700 leading-relaxed mb-12">
-                    At ServicePro, security is not an afterthought — it is built into everything we do. We take the protection of your business data and your clients' information seriously, and we invest continuously in the people, processes, and technology needed to keep it safe.
+                    At Fieldix, security is not an afterthought — it is built into everything we do. We take the protection of your business data and your clients' information seriously, and we invest continuously in the people, processes, and technology needed to keep it safe.
                 </p>
 
                 <!-- Sections -->
@@ -47,7 +47,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">2. Data Encryption</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            All data transmitted between your devices and ServicePro is encrypted using TLS 1.2 or higher, ensuring that data in transit cannot be intercepted or read by third parties. Data at rest — including your business records, client information, and financial data — is encrypted using AES-256, the same standard used by financial institutions and government agencies.
+                            All data transmitted between your devices and Fieldix is encrypted using TLS 1.2 or higher, ensuring that data in transit cannot be intercepted or read by third parties. Data at rest — including your business records, client information, and financial data — is encrypted using AES-256, the same standard used by financial institutions and government agencies.
                         </p>
                     </div>
 
@@ -55,7 +55,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">3. Infrastructure Security</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            ServicePro is hosted on industry-leading cloud infrastructure with built-in redundancy, geographic failover, and continuous uptime monitoring. Our infrastructure is isolated behind firewalls, protected against DDoS attacks, and subject to regular patching and hardening. We maintain automated backups of all critical data, with point-in-time recovery capabilities.
+                            Fieldix is hosted on industry-leading cloud infrastructure with built-in redundancy, geographic failover, and continuous uptime monitoring. Our infrastructure is isolated behind firewalls, protected against DDoS attacks, and subject to regular patching and hardening. We maintain automated backups of all critical data, with point-in-time recovery capabilities.
                         </p>
                     </div>
 
@@ -63,7 +63,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">4. Access Controls</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            Access to production systems and customer data is strictly limited to authorised ServicePro personnel who require it to perform their job functions. We enforce multi-factor authentication (MFA) for all internal system access, use role-based access controls, and maintain detailed audit logs of all access and administrative actions. Access privileges are reviewed and revoked promptly when no longer needed.
+                            Access to production systems and customer data is strictly limited to authorised Fieldix personnel who require it to perform their job functions. We enforce multi-factor authentication (MFA) for all internal system access, use role-based access controls, and maintain detailed audit logs of all access and administrative actions. Access privileges are reviewed and revoked promptly when no longer needed.
                         </p>
                     </div>
 
@@ -79,7 +79,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">6. Vulnerability Disclosure</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            We welcome responsible disclosure of security vulnerabilities from the security research community. If you have discovered a potential security issue in ServicePro, please report it to our security team at <a href="mailto:hello@getservicepro.com" class="text-brand-600 hover:underline">hello@getservicepro.com</a> before making it public. We ask that you give us a reasonable amount of time to investigate and address the issue. We will acknowledge all valid reports and work with you in good faith.
+                            We welcome responsible disclosure of security vulnerabilities from the security research community. If you have discovered a potential security issue in Fieldix, please report it to our security team at <a href="mailto:hello@getservicepro.com" class="text-brand-600 hover:underline">hello@getservicepro.com</a> before making it public. We ask that you give us a reasonable amount of time to investigate and address the issue. We will acknowledge all valid reports and work with you in good faith.
                         </p>
                     </div>
 
@@ -87,7 +87,7 @@ import MarketingLayout from '@/layouts/MarketingLayout.vue';
                         <h2 class="text-xl font-semibold text-neutral-950 mb-3">7. Compliance</h2>
                         <div class="h-px bg-neutral-200 mb-5"></div>
                         <p class="text-neutral-700 leading-relaxed">
-                            ServicePro is designed to support your compliance obligations. Our payment processing is handled by Stripe, which is PCI DSS Level 1 certified — the highest level of certification in the payments industry. We are also designed with CCPA compliance in mind, giving you and your clients appropriate rights over personal data. As we grow, we will pursue additional third-party compliance certifications.
+                            Fieldix is designed to support your compliance obligations. Our payment processing is handled by Stripe, which is PCI DSS Level 1 certified — the highest level of certification in the payments industry. We are also designed with CCPA compliance in mind, giving you and your clients appropriate rights over personal data. As we grow, we will pursue additional third-party compliance certifications.
                         </p>
                     </div>
 

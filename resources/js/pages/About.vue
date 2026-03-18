@@ -8,7 +8,7 @@ import WaitlistForm from '@/components/marketing/WaitlistForm.vue';
 const values = [
     { emoji: '✨', title: 'Simplicity first', description: "Every feature we build has to pass one test: can a plumber on the side of the road use it in under 60 seconds? If not, we simplify it or cut it." },
     { emoji: '🔧', title: 'Built for the trades', description: "We don't build for property managers or enterprise facilities teams. We build for the owner-operator with 1 to 10 people on their crew." },
-    { emoji: '🏡', title: 'Built for home services', description: 'ServicePro is purpose-built for the home service market. Our pricing is straightforward, our support team knows the trades, and our features match how field crews actually work.' },
+    { emoji: '🏡', title: 'Built for home services', description: 'Fieldix is purpose-built for the home service market. Our pricing is straightforward, our support team knows the trades, and our features match how field crews actually work.' },
 ];
 
 const pillars = [
@@ -21,13 +21,13 @@ const pillars = [
 const waitlistBenefits = [
     '30-day free trial (standard is 14 days)',
     'Founding member rate — locked in for your first year',
-    'Priority access before public launch on 1 May 2026',
+    'Priority access before public launch on 1 June 2026',
 ];
 </script>
 
 <template>
     <MarketingLayout
-        title="About ServicePro"
+        title="About Fieldix"
         description="Built for home service business owners who are tired of overpriced, overcomplicated software."
     >
         <!-- Hero -->
@@ -61,7 +61,7 @@ const waitlistBenefits = [
                             Scheduling software, invoicing tools, and automated follow-up used to cost $300+ a month and require a dedicated admin to operate. That's not fair when you're a plumber running two vans and trying to build something for your family.
                         </p>
                         <p class="mt-4 text-lg leading-relaxed text-neutral-500">
-                            ServicePro brings those capabilities down to $79/month with setup in under 30 minutes — no IT department, no onboarding consultant, no six-week implementation project.
+                            Fieldix brings those capabilities down to $79/month with setup in under 30 minutes — no IT department, no onboarding consultant, no six-week implementation project.
                         </p>
                         <ul class="mt-8 space-y-3">
                             <li v-for="item in ['Affordable enough for a solo operator', 'Powerful enough for a crew of 10', 'Simple enough to use from a job site']" :key="item" class="flex items-center gap-3 text-neutral-700">
@@ -89,13 +89,13 @@ const waitlistBenefits = [
         <section class="bg-neutral-50 py-20 lg:py-28">
             <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
                 <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-brand-600">Our story</p>
-                <h2 class="text-3xl font-bold text-neutral-900 lg:text-4xl">How ServicePro got started</h2>
+                <h2 class="text-3xl font-bold text-neutral-900 lg:text-4xl">How Fieldix got started</h2>
                 <div class="mt-8 space-y-6 text-lg leading-relaxed text-neutral-600">
                     <p>In the summer of 2024, our founder sat in a parking lot outside a supply house in Phoenix watching an HVAC technician update his job schedule in three different apps — a notes app, a calendar, and a spreadsheet he'd emailed himself — because none of the "real" software fit how he actually worked.</p>
                     <p>That technician had been in business for 11 years. He'd tried Jobber, he'd tried Housecall Pro, he'd tried a couple of others. They were all too expensive when he was small, too complex when he needed to move fast, and built with assumptions that didn't match his day.</p>
                     <p>We spent the next six months interviewing hundreds of HVAC technicians, plumbers, electricians, cleaners, and handymen across 22 states. We asked them what they hated about their current software, what they wished it did, and what they'd pay if it actually solved their problem.</p>
                     <p>The answers were remarkably consistent: they wanted scheduling that worked on a phone, invoices they could send the moment a job was done, and something that would automatically follow up on quotes and unpaid invoices so they didn't have to chase clients.</p>
-                    <p>That's exactly what we built. ServicePro is the result of those conversations — not a feature-bloated enterprise platform trimmed down to a lower price point, but something designed from scratch for the way trades businesses actually operate.</p>
+                    <p>That's exactly what we built. Fieldix is the result of those conversations — not a feature-bloated enterprise platform trimmed down to a lower price point, but something designed from scratch for the way trades businesses actually operate.</p>
                 </div>
             </div>
         </section>

@@ -16,7 +16,7 @@ export const testimonials: Testimonial[] = [
         state: 'AZ',
         initials: 'MH',
         rating: 5,
-        quote: 'I used to lose track of at least 2–3 jobs a month. With ServicePro, every job is scheduled, invoiced, and followed up automatically. Saved me around $800 a month in lost work.',
+        quote: 'I used to lose track of at least 2–3 jobs a month. With Fieldix, every job is scheduled, invoiced, and followed up automatically. Saved me around $800 a month in lost work.',
     },
     {
         name: 'Rosa Martinez',
@@ -25,7 +25,7 @@ export const testimonials: Testimonial[] = [
         state: 'TX',
         initials: 'RM',
         rating: 5,
-        quote: 'The SMS follow-up is a game changer. I sent a quote on a Monday, ServicePro followed up Tuesday, and the client booked and paid by Wednesday. Didn\'t have to lift a finger.',
+        quote: 'The SMS follow-up is a game changer. I sent a quote on a Monday, Fieldix followed up Tuesday, and the client booked and paid by Wednesday. Didn\'t have to lift a finger.',
     },
     {
         name: 'Tyler Brooks',
@@ -43,7 +43,7 @@ export const testimonials: Testimonial[] = [
         state: 'FL',
         initials: 'DC',
         rating: 5,
-        quote: 'Running a 4-person cleaning crew, I was drowning in WhatsApp messages. ServicePro replaced all of that. My team knows exactly where to be and when.',
+        quote: 'Running a 4-person cleaning crew, I was drowning in WhatsApp messages. Fieldix replaced all of that. My team knows exactly where to be and when.',
     },
     {
         name: 'James Okafor',

@@ -5,36 +5,36 @@ export interface FaqItem {
 
 export const generalFaqs: FaqItem[] = [
     {
-        question: 'When does ServicePro launch?',
-        answer: 'We launch publicly on 1 May 2026. Beta access begins 1 April 2026 for waitlist members.',
+        question: 'When does Fieldix launch?',
+        answer: 'We launch publicly on 1 June 2026. Beta access begins 1 April 2026 for waitlist members.',
     },
     {
         question: 'Do I need a credit card to sign up?',
         answer: 'No. Your 14-day free trial (or 30-day waitlist trial) requires no credit card. You only enter payment details when you choose to subscribe.',
     },
     {
-        question: 'Which home service businesses does ServicePro work for?',
-        answer: 'ServicePro is built for small to medium home service businesses — including HVAC, plumbing, electrical, cleaning, handyman, landscaping, pest control, painting, appliance repair, and many more trades.',
+        question: 'Which home service businesses does Fieldix work for?',
+        answer: 'Fieldix is built for small to medium home service businesses — including HVAC, plumbing, electrical, cleaning, handyman, landscaping, pest control, painting, appliance repair, and many more trades.',
     },
     {
         question: 'How long does setup take?',
         answer: 'Most business owners are fully set up — jobs scheduled, team added, and first invoice sent — in under 30 minutes. There\'s no training call required.',
     },
     {
-        question: 'Can I use ServicePro on my phone?',
-        answer: 'Yes. ServicePro is mobile-first. Everything works on iOS and Android browsers without downloading a separate app. A native app is on our roadmap.',
+        question: 'Can I use Fieldix on my phone?',
+        answer: 'Yes. Fieldix is mobile-first. Everything works on iOS and Android browsers without downloading a separate app. A native app is on our roadmap.',
     },
     {
         question: 'How does the SMS follow-up work?',
-        answer: 'When you send a quote, ServicePro automatically sends a follow-up SMS to your client 24 hours later. If they reply, you see the conversation in your inbox. No manual follow-up required.',
+        answer: 'When you send a quote, Fieldix automatically sends a follow-up SMS to your client 24 hours later. If they reply, you see the conversation in your inbox. No manual follow-up required.',
     },
     {
-        question: 'What does ServicePro cost?',
+        question: 'What does Fieldix cost?',
         answer: 'Plans start at $79/month for solo operators up to $299/month for teams of up to 10. Annual billing saves 20%. See our full pricing page for details.',
     },
     {
-        question: 'How is ServicePro different from Jobber or Housecall Pro?',
-        answer: 'ServicePro is purpose-built for crews of 1–10. We offer 90% of the features at half the price with a simpler setup experience. Jobber and Housecall Pro are great products but built for larger, more complex operations.',
+        question: 'How is Fieldix different from Jobber or Housecall Pro?',
+        answer: 'Fieldix is purpose-built for crews of 1–10. We offer 90% of the features at half the price with a simpler setup experience. Jobber and Housecall Pro are great products but built for larger, more complex operations.',
     },
     {
         question: 'Can I import my existing customer data?',

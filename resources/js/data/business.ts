@@ -1,6 +1,6 @@
 export const business = {
-    name: 'ServicePro LLC',
-    legalName: 'ServicePro LLC',
+    name: 'Fieldix LLC',
+    legalName: 'Fieldix LLC',
     registration: 'Delaware, United States',
     address: {
         line1: '1309 Coffeen Avenue STE 1200',
@@ -23,7 +23,7 @@ export const business = {
     },
     phone: {
         display: '+1 (855) 737-2876',
-        vanity: '1-855-SERVICEPRO',
+        vanity: '1-855-FIELDIX',
         value: '+18557372876',
     },
     hours: {
@@ -34,7 +34,7 @@ export const business = {
     },
     launch: {
         beta: 'April 1, 2026',
-        public: 'May 1, 2026',
+        public: 'June 1, 2026',
         waitlistPerk: '30 days free (vs standard 14-day trial)',
         foundingPricing: 'Locked-in for first year for early signups',
     },

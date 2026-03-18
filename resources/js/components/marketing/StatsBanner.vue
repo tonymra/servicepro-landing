@@ -4,7 +4,7 @@ import { WAITLIST_DISPLAY, BETA_DISPLAY } from '@/data/stats';
 const stats = [
     { value: WAITLIST_DISPLAY, label: 'Businesses on the waitlist' },
     { value: '<30 min', label: 'Average setup time' },
-    { value: '$79/mo', label: 'Starting price — half the cost of Jobber' },
+    { value: '$79/mo', label: 'Starting price — no contracts, no surprises' },
     { value: BETA_DISPLAY, label: 'Businesses in beta' },
 ];
 </script>

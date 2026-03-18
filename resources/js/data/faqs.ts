@@ -33,8 +33,8 @@ export const generalFaqs: FaqItem[] = [
         answer: 'Plans start at $79/month for solo operators up to $299/month for teams of up to 10. Annual billing saves 20%. See our full pricing page for details.',
     },
     {
-        question: 'How is Fieldix different from Jobber or Housecall Pro?',
-        answer: 'Fieldix is purpose-built for crews of 1–10. We offer 90% of the features at half the price with a simpler setup experience. Jobber and Housecall Pro are great products but built for larger, more complex operations.',
+        question: 'How is Fieldix different from other field service software?',
+        answer: 'Most field service platforms are built for large operations — they\'re expensive, complex to set up, and assume you have an office manager or IT team. Fieldix is purpose-built for crews of 1–10. You get the same core capabilities at a fraction of the price, with setup in under 30 minutes.',
     },
     {
         question: 'Can I import my existing customer data?',

@@ -180,7 +180,7 @@ onUnmounted(() => {
                                     <div class="h-3 w-3 rounded-full bg-green-400"></div>
                                 </div>
                                 <div class="flex-1 rounded bg-white/10 px-3 py-1 text-xs text-neutral-300 text-center">
-                                    app.fieldix.com
+                                    app.getfieldix.com
                                 </div>
                             </div>
                             <!-- App content -->
@@ -352,7 +352,7 @@ onUnmounted(() => {
                     </div>
                 </div>
                 <div class="mt-10 text-center">
-                    <Button href="https://app.fieldix.com/register" variant="primary" size="lg" external>
+                    <Button href="https://app.getfieldix.com/register" variant="primary" size="lg" external>
                         Try Fieldix free for 14 days — no credit card required
                     </Button>
                 </div>

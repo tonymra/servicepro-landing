@@ -38,7 +38,7 @@ const waitlistBenefits = [
                     From first call to final payment — Fieldix manages every step of the job lifecycle.
                 </p>
                 <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                    <Button href="https://app.fieldix.com/register" variant="primary" size="lg" external>
+                    <Button href="https://app.getfieldix.com/register" variant="primary" size="lg" external>
                         Start Free Trial
                     </Button>
                     <Button href="/pricing" variant="secondary" size="lg">View Pricing</Button>

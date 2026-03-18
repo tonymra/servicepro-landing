@@ -57,7 +57,7 @@ defineProps<Props>();
                         <div class="h-3 w-3 rounded-full bg-amber-400"></div>
                         <div class="h-3 w-3 rounded-full bg-green-400"></div>
                     </div>
-                    <div class="flex-1 rounded bg-white/10 px-3 py-1 text-xs text-neutral-300 text-center">app.fieldix.com</div>
+                    <div class="flex-1 rounded bg-white/10 px-3 py-1 text-xs text-neutral-300 text-center">app.getfieldix.com</div>
                 </div>
                 <div class="p-4">
                     <div class="mb-3 flex items-center justify-between">
